@@ -2,7 +2,7 @@
 - 👀 I’m interested in machine learning using python
 - 🌱 I’m currently learning SQL, R, statistical data analysis
 - 💞️ I’m looking to collaborate on machine learning projects
-- 📫 How to reach me ... souravchembwn@gmail.com, mondals1@tcd.ie
+- 📫 How to reach me?? Email me in souravchembwn@gmail.com, mondals1@tcd.ie
 
 <!---
 mondalsou/mondalsou is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
