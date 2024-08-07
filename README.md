@@ -1,6 +1,6 @@
 - 👋 Hi, I’m  Sourav Mondal @mondalsou
-- 👀 I’m interested in machine learning using python
-- 🌱 I’m currently learning SQL, R, statistical data analysis
+-  I work as a chemiinformatics
+- 👀 I use machine learning using python
 - 💞️ I’m looking to collaborate on machine learning projects
 - 📫 How to reach me?? Email me in souravchembwn@gmail.com
 
