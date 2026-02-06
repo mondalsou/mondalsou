@@ -4,7 +4,7 @@
 
 ### AI/ML Scientist | Computational Chemist | Drug Discovery
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-00d4ff?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mondalsou.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00d4ff?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mondalsou.github.io/mondalsou/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soura1/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mondalsou)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:souravchembwn@gmail.com)
@@ -106,8 +106,8 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 
 **📍 Hyderabad, India** | **📧 souravchembwn@gmail.com** | **📱 +91 9740851654**
 
-[![Portfolio](https://img.shields.io/badge/View_Portfolio-00d4ff?style=for-the-badge)](https://mondalsou.github.io)
-[![CV](https://img.shields.io/badge/Download_CV-7c3aed?style=for-the-badge)](https://mondalsou.github.io/cv.html)
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-00d4ff?style=for-the-badge)](https://mondalsou.github.io/mondalsou/)
+[![CV](https://img.shields.io/badge/Download_CV-7c3aed?style=for-the-badge)](https://mondalsou.github.io/mondalsou/cv.html)
 
 </div>
 
