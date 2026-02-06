@@ -1,0 +1,59 @@
+# Docker Compose for Drug Discovery Triage
+# Self-hosted deployment with frontend and backend
+
+version: '3.8'
+
+services:
+  # Backend API (FastAPI + RDKit)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: drug-discovery-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - drug-discovery-network
+
+  # Frontend (React + Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:8000
+    container_name: drug-discovery-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - drug-discovery-network
+
+networks:
+  drug-discovery-network:
+    driver: bridge
+
+# To run:
+# docker-compose up --build
+#
+# Access:
+# - Frontend: http://localhost:3000
+# - Backend API: http://localhost:8000
+# - API Docs: http://localhost:8000/docs

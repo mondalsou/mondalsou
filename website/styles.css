@@ -813,6 +813,38 @@ section {
     box-shadow: var(--glow-primary);
 }
 
+.new-badge {
+    background: var(--gradient-secondary);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(244, 114, 182, 0.6);
+    }
+}
+
+.project-card.featured {
+    border: 2px solid var(--primary);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+}
+
+.project-card.featured::before {
+    height: 4px;
+}
+
+.demo-link {
+    background: var(--gradient-secondary) !important;
+    border-color: var(--secondary) !important;
+}
+
+.demo-link:hover {
+    box-shadow: var(--glow-accent) !important;
+}
+
 .project-description {
     color: var(--text-muted);
     margin-bottom: var(--spacing-md);

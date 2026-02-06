@@ -1,0 +1,13 @@
+name: eddsd
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rdkit
+  - pip
+  - ipykernel
+  - jupyterlab
+  - pip:
+      - fastapi
+      - uvicorn[standard]
+      - pydantic
