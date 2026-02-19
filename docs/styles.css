@@ -705,41 +705,6 @@ section {
     margin: 0;
 }
 
-/* Orbit animation for work-highlights panel */
-.work-orbit-ring.orbiting {
-    display: block;
-    position: relative;
-    height: 460px;
-}
-
-.work-orbit-ring.orbiting .work-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 210px;
-    margin: 0;
-    will-change: transform;
-}
-
-.work-orbit-ring.orbiting .work-item.returning {
-    transition: transform 0.5s ease;
-}
-
-.current-work-banner:hover .work-orbit-ring:not(.orbiting) .work-item,
-.current-work-banner:focus-within .work-orbit-ring:not(.orbiting) .work-item {
-    /* subtle pulse hint before orbit starts */
-}
-
-.orbit-hint {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-top: var(--spacing-sm);
-    opacity: 0.6;
-    letter-spacing: 0.05em;
-    z-index: 1;
-    position: relative;
-}
 
 .work-tech {
     display: flex;
