@@ -705,43 +705,40 @@ section {
     margin: 0;
 }
 
-/* Sliding shimmer animation for 4th work item */
-@keyframes slide-shine {
-    0%   { background-position: -200% center; }
-    100% { background-position: 200% center; }
-}
-
-.work-item-slide {
+/* Orbit animation for work-highlights panel */
+.work-orbit-ring.orbiting {
+    display: block;
     position: relative;
-    overflow: hidden;
-    border-color: rgba(124, 58, 237, 0.4);
-    background: rgba(124, 58, 237, 0.07);
+    height: 460px;
 }
 
-.work-item-slide::after {
-    content: '';
+.work-orbit-ring.orbiting .work-item {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        105deg,
-        transparent 40%,
-        rgba(124, 58, 237, 0.18) 50%,
-        rgba(244, 114, 182, 0.12) 55%,
-        transparent 65%
-    );
-    background-size: 200% 100%;
-    animation: slide-shine 3s linear infinite;
-    pointer-events: none;
-    border-radius: inherit;
+    top: 50%;
+    left: 50%;
+    width: 210px;
+    margin: 0;
+    will-change: transform;
 }
 
-.work-item-slide h4 {
-    color: var(--accent);
+.work-orbit-ring.orbiting .work-item.returning {
+    transition: transform 0.5s ease;
 }
 
-.work-item-slide:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
+.current-work-banner:hover .work-orbit-ring:not(.orbiting) .work-item,
+.current-work-banner:focus-within .work-orbit-ring:not(.orbiting) .work-item {
+    /* subtle pulse hint before orbit starts */
+}
+
+.orbit-hint {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: var(--spacing-sm);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    z-index: 1;
+    position: relative;
 }
 
 .work-tech {
