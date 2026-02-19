@@ -82,26 +82,26 @@ const ADMETIcon = () => (
   </svg>
 )
 
-// Brain icon for CNS
-const BrainIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2a9 9 0 00-9 9c0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11a9 9 0 00-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm-1-11h2v6h-2zm0 8h2v2h-2z" />
-  </svg>
-)
+// Brain icon for CNS (currently unused)
+// const BrainIcon = () => (
+//   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+//     <path d="M12 2a9 9 0 00-9 9c0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11a9 9 0 00-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm-1-11h2v6h-2zm0 8h2v2h-2z" />
+//   </svg>
+// )
 
-// Liver icon for metabolism
-const LiverIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-  </svg>
-)
+// Liver icon for metabolism (currently unused)
+// const LiverIcon = () => (
+//   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+//     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+//   </svg>
+// )
 
-// Toxicity icon (skull)
-const ToxicityIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-  </svg>
-)
+// Toxicity icon (skull, currently unused)
+// const ToxicityIcon = () => (
+//   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+//     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+//   </svg>
+// )
 
 type Stereocenter = {
   atom_index: number
@@ -268,7 +268,7 @@ type MoleculeAnalysisResponse = {
 }
 
 // Use environment variable for API URL, fallback to localhost for development
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_URL || 'https://drug-discovery-triage-1.onrender.com'
 
 // Example molecules with defined stereochemistry
 const EXAMPLE_MOLECULES = [
