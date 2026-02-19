@@ -28,8 +28,9 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 | Project | Description |
 |---------|-------------|
 | **Crystal Structure Prediction** | Graph Neural Networks for rapid polymorph screening of drug-like molecules |
-| **Conformer Generation** | AI models for PROTACs across diverse environments & ligand conformers in protein pockets |
-| **pKa & ADMET Prediction** | ML models for pKa, solubility, logP, solvation energy, and ADMET properties |
+| **Conformer Generation** | AI-driven platform enabling environment-aware conformer generation for advanced drug discovery applications |
+| **pKa Estimation** | Two complementary modeling approaches—QM-based and GNN-based—for pKa estimation under non-aqueous conditions |
+| **ADMET Prediction** | Physics-based QM platform for high-accuracy prediction of key thermodynamic properties: solubility, logP, and solvation energy |
 
 ---
 
