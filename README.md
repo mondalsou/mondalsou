@@ -85,9 +85,9 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mondalsou&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0a0f&title_color=00d4ff&icon_color=7c3aed&text_color=a1a1aa)
+![GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=mondalsou&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0a0f&title_color=00d4ff&icon_color=7c3aed&text_color=a1a1aa)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mondalsou&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a0f&title_color=00d4ff&text_color=a1a1aa)
+![Top Languages](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=mondalsou&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a0f&title_color=00d4ff&text_color=a1a1aa)
 
 </div>
 
