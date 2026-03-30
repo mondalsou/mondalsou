@@ -34,6 +34,18 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 
 ---
 
+## 🚀 Featured Projects
+
+| Project | Stack | Highlights |
+|---------|-------|------------|
+| [**Drug Discovery Triage**](https://github.com/mondalsou/drug-discovery-triage) | React · FastAPI · RDKit | Real-time ADMET predictions, QED scoring, PAINS alerts, live demo |
+| [**Solubility Dual-Graph GNN**](https://github.com/mondalsou/solubility-dual-graph-gnn) | PyTorch · MPNN · Cross-Attention | R²=0.90 on 100K+ solute-solvent pairs (BigSolDB 2.0) |
+| [**GNN-ADMET Prediction**](https://github.com/mondalsou/gnn-admet-prediction) | PyTorch · GAT · MPNN · FastAPI | GCN/GAT/MPNN/AttentiveFP for lipophilicity, BBB, CYP3A4, hERG |
+| [**Lead Optimization Agent**](https://github.com/mondalsou/lead-optimization-agent) | Claude AI · RDKit · Streamlit | AI agent loop for iterative structural optimization with property tracking |
+| [**ADMET Prediction ML**](https://github.com/mondalsou/admet-prediction-ml) | Scikit-learn · XGBoost · SHAP | Classical ML pipeline with interpretability for ADMET endpoints |
+
+---
+
 ## 🛠️ Technical Skills
 
 ### AI/ML & Deep Learning

@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Lock files
+.~lock.*
+
+# Personal documents (kept locally, not tracked in profile repo)
+*.pdf
+*.pptx
+*.ppt
+*.docx
+
+# Project directories (each lives in its own repo)
+LLM-RAG/
+Trading_agent/
+admet-prediction-ml/
+drug-discovery-triage/
+gnn-admet-prediction/
+lead-optimization-agent/
+n8n_trading/
+solubility-dual-graph-gnn/
+
+# MLflow runs
+mlruns/
+
+# Extra markdown docs
+DEPLOYMENT_GUIDE.md
+DRUG_DISCOVERY_UPDATE.md
+PORTFOLIO_SUMMARY.md
+QUICK_START.md
+
+# Images not used by portfolio
+sourav_github.PNG
