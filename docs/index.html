@@ -1,829 +1,804 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth bg-[#050508] text-zinc-300 antialiased selection:bg-cyan-500/30 selection:text-cyan-50">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourav Mondal, PhD - AI/ML Scientist | Drug Discovery</title>
+    <title>Sourav Mondal, PhD — AI/ML Scientist | Drug Discovery</title>
     <meta name="description" content="AI/ML Scientist with PhD specializing in Drug Discovery, Graph Neural Networks, Computational Chemistry, and Deep Learning">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#050508',
+                        surface: '#0a0a0f',
+                        surfaceElevated: '#12121a',
+                        cyanAccent: '#00f0ff',
+                        purpleAccent: '#8a2be2',
+                        pinkAccent: '#ff80b5',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M0 0h40v40H0V0zm39 39V1H1v38h38z\\' fill=\\'%23ffffff\\' fill-opacity=\\'0.02\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E')",
+                    },
+                    animation: {
+                        'blob': 'blob 15s infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'pulse-glow': 'pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.4', boxShadow: '0 0 20px 0px rgba(0, 240, 255, 0.2)' },
+                            '50%': { opacity: '0.8', boxShadow: '0 0 40px 10px rgba(0, 240, 255, 0.5)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050508; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        .lab-border { position: relative; }
+        .lab-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+        }
+
+        .glass-panel {
+            background: rgba(10, 10, 15, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        h1, h2, h3, h4 { letter-spacing: -0.02em; }
+        .glow-text { text-shadow: 0 0 20px rgba(0, 240, 255, 0.35); }
+
+        .pub-row:hover .pub-chip {
+            background-color: rgba(138, 43, 226, 0.2);
+            color: #d8b4fe;
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+
+        /* Mobile menu */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
+    </style>
 </head>
-<body>
+<body class="relative min-h-screen overflow-x-hidden font-sans">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none bg-grid-pattern opacity-50"></div>
+    <div class="fixed top-[-10%] left-[-10%] w-96 h-96 bg-purpleAccent/20 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob z-0 pointer-events-none"></div>
+    <div class="fixed top-[20%] right-[-5%] w-96 h-96 bg-cyanAccent/10 rounded-full mix-blend-screen filter blur-[120px] opacity-40 animate-blob z-0 pointer-events-none" style="animation-delay:2s;"></div>
+    <div class="fixed bottom-[-10%] left-[20%] w-[30rem] h-[30rem] bg-pinkAccent/10 rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-blob z-0 pointer-events-none" style="animation-delay:4s;"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Sourav Mondal, PhD | Drug Discovery AI/ML</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="cv.html" class="btn-github" style="background: linear-gradient(135deg, #7c3aed 0%, #f472b6 100%);">CV</a></li>
-                <li><a href="https://github.com/mondalsou" target="_blank" class="btn-github">GitHub</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-zinc-100 font-medium tracking-tight text-sm">
+                <i class="ph ph-atom text-cyanAccent text-xl drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]"></i>
+                <span>Sourav Mondal, PhD</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-mono text-zinc-400">
+                <a href="#about" class="hover:text-cyanAccent transition-colors">01. About</a>
+                <a href="#projects" class="hover:text-cyanAccent transition-colors">02. Projects</a>
+                <a href="#publications" class="hover:text-cyanAccent transition-colors">03. Publications</a>
+                <a href="#experience" class="hover:text-cyanAccent transition-colors">04. Experience</a>
+                <a href="#skills" class="hover:text-cyanAccent transition-colors">05. Skills</a>
+                <a href="Sourav_Mondal_CV.pdf" download class="px-4 py-2 bg-white/5 border border-purpleAccent/40 rounded hover:bg-purpleAccent/10 hover:border-purpleAccent transition-all text-zinc-200">CV →</a>
+                <a href="#contact" class="px-4 py-2 bg-white/5 border border-white/10 rounded hover:bg-white/10 hover:border-cyanAccent/50 transition-all text-zinc-200">Connect →</a>
+            </div>
+            <!-- Mobile toggle -->
+            <button id="menu-toggle" class="md:hidden text-zinc-400 hover:text-white transition-colors" aria-label="Toggle menu">
+                <i class="ph ph-list text-2xl"></i>
             </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="flex-col gap-4 px-6 pb-6 font-mono text-sm text-zinc-400 border-t border-white/5 bg-[#050508]">
+            <a href="#about" class="hover:text-cyanAccent transition-colors py-1">01. About</a>
+            <a href="#projects" class="hover:text-cyanAccent transition-colors py-1">02. Projects</a>
+            <a href="#publications" class="hover:text-cyanAccent transition-colors py-1">03. Publications</a>
+            <a href="#experience" class="hover:text-cyanAccent transition-colors py-1">04. Experience</a>
+            <a href="#skills" class="hover:text-cyanAccent transition-colors py-1">05. Skills</a>
+            <a href="Sourav_Mondal_CV.pdf" class="hover:text-purpleAccent transition-colors py-1">CV →</a>
+            <a href="#contact" class="hover:text-cyanAccent transition-colors py-1">Connect →</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Floating 3D Shapes -->
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <!-- Profile Picture -->
-                <div class="profile-picture-container">
-                    <div class="profile-picture-glow"></div>
-                    <img src="assets/images/profile.png" alt="Sourav Mondal" class="profile-picture" onerror="this.style.display='none'">
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-24 flex flex-col gap-32">
+
+        <!-- HERO -->
+        <section class="min-h-[80vh] flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lab-border pb-16">
+            <div class="flex-1 flex flex-col items-start w-full">
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-cyanAccent/20 bg-cyanAccent/5 text-cyanAccent text-xs font-mono uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+                    Open to AI/ML Scientist Roles · Drug Discovery
                 </div>
-                
-                <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Sourav</span>
+
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tighter mb-4 glow-text">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanAccent to-purpleAccent">Sourav.</span>
                 </h1>
-                <p class="hero-subtitle">
-                    AI/ML Scientist | Computational Chemist | Drug Discovery
+
+                <p class="text-xl lg:text-2xl text-zinc-300 font-light mb-4 tracking-tight">
+                    AI/ML Scientist &nbsp;·&nbsp; Computational Chemist &nbsp;·&nbsp; Drug Discovery
                 </p>
-                <p class="hero-description">
-                    Computational scientist with 10+ years combining AI/ML with drug discovery and materials science. 
-                    Currently at Aganitha Cognitive Solutions, building end-to-end pipelines for crystal structure prediction, 
-                    conformer generation, pKa estimation, and ADMET property calculations. Published in Nature Computational Materials, JACS, and Nano Letters.
+
+                <p class="text-lg text-zinc-400 max-w-2xl font-light leading-relaxed mb-10 border-l-2 border-white/10 pl-6 py-1">
+                    Computational scientist with <strong class="text-zinc-200 font-medium">10+ years</strong> bridging quantum chemistry and deep learning
+                    to accelerate drug discovery. Currently at <strong class="text-zinc-200 font-medium">Aganitha Cognitive Solutions</strong> — building
+                    end-to-end pipelines for crystal structure prediction, conformer generation, pKa estimation, and ADMET property calculations.
+                    Published in <em class="text-zinc-300">Nature Computational Materials</em>, <em class="text-zinc-300">JACS</em>, and <em class="text-zinc-300">Nano Letters</em>.
                 </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="cv.html" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed 0%, #f472b6 100%);">Download CV</a>
-                    <a href="#publications" class="btn btn-secondary">Publications</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I'm an <strong>AI/ML Scientist</strong> specializing in drug discovery and computational chemistry with <strong>10+ years of experience</strong>. 
-                    Currently a <strong>Scientist at Aganitha Cognitive Solutions</strong>, I develop Graph Neural Networks for crystal structure 
-                    prediction, AI models for conformer generation, pKa prediction, and <strong>ADMET property calculations</strong> for pharmaceutical applications.
-                </p>
-                <p>
-                    With a <strong>PhD from JNCASR Bangalore</strong> and postdoctoral research at <strong>Trinity College Dublin</strong>, 
-                    I've published in <strong>Nature Computational Materials, JACS, and Nano Letters</strong>. My expertise spans 
-                    <strong>deep learning (PyTorch, TensorFlow, GNNs), quantum chemistry (DFT, molecular modeling), and cheminformatics (RDKit)</strong>.
-                </p>
-                <p>
-                    I build production-grade AI/ML systems for molecular property prediction, combining rigorous computational chemistry 
-                    with modern deep learning to accelerate drug discovery. Proficient in Python, cloud technologies (Azure, Docker), 
-                    and end-to-end ML pipelines from research to deployment.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects & Research</h2>
-            
-            <!-- Current Work Highlight -->
-            <div class="current-work-banner">
-                <h3>🔬 Current Work at Aganitha Cognitive Solutions</h3>
-                <p class="work-description">
-                    Building next-generation AI/ML tools for pharmaceutical research and drug discovery
-                </p>
-                <div class="work-highlights">
-                    <div class="work-item">
-                        <h4>Crystal Structure Prediction Pipeline</h4>
-                        <p>Graph Neural Networks for rapid polymorph screening of drug-like molecules</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>Conformer Generation</h4>
-                        <p>AI-driven platform enabling environment-aware conformer generation for advanced drug discovery applications</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>pKa Estimation</h4>
-                        <p>Two complementary modeling approaches—QM-based and GNN-based—for pKa estimation under non-aqueous conditions</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>ADMET Prediction</h4>
-                        <p>Physics-based QM platform for high-accuracy prediction of key thermodynamic properties: solubility, logP, and solvation energy</p>
-                    </div>
-                </div>
-<div class="work-tech">
-                    <span class="tech-badge">PyTorch</span>
-                    <span class="tech-badge">Graph Neural Networks</span>
-                    <span class="tech-badge">RDKit</span>
-                    <span class="tech-badge">CP2K</span>
-                    <span class="tech-badge">Docker</span>
-                    <span class="tech-badge">Azure</span>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#projects" class="group relative px-6 py-3 bg-surfaceElevated border border-cyanAccent shadow-[0_0_15px_rgba(0,240,255,0.15)] flex items-center gap-2 overflow-hidden transition-all hover:shadow-[0_0_25px_rgba(0,240,255,0.3)]">
+                        <div class="absolute inset-0 bg-cyanAccent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+                        <span class="relative z-10 text-white group-hover:text-base font-medium tracking-tight">View Projects</span>
+                        <i class="ph ph-arrow-right relative z-10 text-cyanAccent group-hover:text-base transition-colors duration-300"></i>
+                    </a>
+                    <a href="Sourav_Mondal_CV.pdf" download class="px-6 py-3 border border-purpleAccent/50 hover:border-purpleAccent text-zinc-300 hover:text-white transition-all font-medium flex items-center gap-2 bg-purpleAccent/5 hover:bg-purpleAccent/10">
+                        <i class="ph ph-download-simple"></i> Download CV
+                    </a>
+                    <a href="#publications" class="px-6 py-3 border border-white/10 hover:border-white/30 text-zinc-400 hover:text-zinc-200 transition-all font-medium flex items-center gap-2">
+                        <i class="ph ph-books"></i> Publications
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-white/10 hover:border-white/30 text-zinc-400 hover:text-zinc-200 transition-all font-medium flex items-center gap-2">
+                        <i class="ph ph-chat-circle"></i> Get in Touch
+                    </a>
                 </div>
             </div>
 
-            <!-- Drug Discovery & Computational Chemistry -->
-            <div class="project-category">
-                <h3 class="category-title">🧬 Drug Discovery & Computational Chemistry</h3>
-                <div class="projects-grid">
+            <!-- Profile Picture -->
+            <div class="relative flex-shrink-0 w-64 h-64 lg:w-80 lg:h-80 mx-auto lg:mx-0">
+                <div class="absolute inset-0 border border-white/5 rounded-full animate-spin-slow"></div>
+                <div class="absolute inset-4 border border-dashed border-purpleAccent/30 rounded-full animate-spin-slow" style="animation-direction:reverse;animation-duration:25s;"></div>
+                <div class="absolute inset-8 border border-cyanAccent/20 rounded-full"></div>
+                <div class="absolute inset-4 rounded-full overflow-hidden border-2 border-[#050508] bg-surfaceElevated shadow-2xl z-10">
+                    <img src="assets/images/profile.png" alt="Sourav Mondal" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-700" onerror="this.parentElement.classList.add('flex','items-center','justify-center'); this.remove(); this.parentElement.innerHTML += '<i class=\'ph ph-user text-5xl text-zinc-600\'></i>'">
+                    <div class="absolute inset-0 rounded-full shadow-[inset_0_0_40px_rgba(0,0,0,0.6)] pointer-events-none"></div>
+                </div>
+                <div class="absolute top-0 right-1/4 w-3 h-3 bg-cyanAccent rounded-full shadow-[0_0_10px_#00f0ff] z-20"></div>
+                <div class="absolute bottom-1/4 left-0 w-2 h-2 bg-pinkAccent rounded-full shadow-[0_0_10px_#ff80b5] z-20"></div>
+            </div>
+        </section>
 
-                    <div class="project-card featured">
-                        <div class="project-header">
-                            <h3>Drug Discovery Triage Platform</h3>
-                            <span class="project-tag">Full-Stack</span>
-                            <span class="project-tag new-badge">New!</span>
+        <!-- ABOUT -->
+        <section id="about" class="lab-border pb-24 scroll-mt-24">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+
+                <!-- Left: heading + accent bar -->
+                <div class="w-full lg:w-1/3 relative">
+                    <div class="lg:sticky lg:top-32 flex flex-col items-start pt-2">
+                        <div class="absolute left-0 top-0 h-full max-h-[140px] w-[3px] rounded-full bg-gradient-to-b from-cyanAccent to-purpleAccent shadow-[0_0_15px_rgba(0,240,255,0.4)]"></div>
+                        <div class="pl-8">
+                            <span class="text-xs font-mono font-bold tracking-[0.2em] uppercase text-cyanAccent mb-4 block opacity-80">Milestones</span>
+                            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.1]">
+                                Key<br><span class="text-white/30">Achievements</span>
+                            </h2>
+                            <p class="mt-6 text-sm text-zinc-500 font-light leading-relaxed max-w-[260px]">
+                                A proven track record of shipping production pipelines, autonomous agents, and highly-cited research in computational drug discovery.
+                            </p>
                         </div>
-                        <p class="project-description">
-                            Full-stack drug discovery triage application built with React, FastAPI, and RDKit.
-                            Features real-time ADMET property predictions, QED scoring, PAINS alerts, and interactive
-                            molecular visualization for rapid compound screening and lead optimization.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">React + TypeScript</span>
-                            <span class="feature-badge">FastAPI</span>
-                            <span class="feature-badge">RDKit</span>
-                            <span class="feature-badge">ADMET Prediction</span>
+                    </div>
+                </div>
+
+                <!-- Right: numbered rows -->
+                <div class="w-full lg:w-2/3 flex flex-col">
+                    <div class="h-px w-full bg-white/5 hidden lg:block"></div>
+
+                    <!-- Row 01 -->
+                    <article class="group flex flex-col md:flex-row items-baseline gap-4 md:gap-10 py-10 border-b border-white/5 hover:border-white/20 transition-all duration-500">
+                        <div class="md:w-14 shrink-0">
+                            <span class="text-xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-cyanAccent to-purpleAccent opacity-80 group-hover:opacity-100 transition-opacity">01</span>
                         </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Real-time ADMET property calculations (lipophilicity, solubility, permeability)</li>
-                                <li>QED drug-likeness scoring and PAINS substructure alerts</li>
-                                <li>Interactive 2D molecular structure visualization</li>
-                                <li>Dockerized deployment with CI/CD pipeline</li>
-                                <li>Production-ready with comprehensive error handling</li>
+                        <div class="flex-1 transform group-hover:translate-x-2 transition-transform duration-500">
+                            <h3 class="text-xl md:text-2xl font-semibold text-zinc-100 group-hover:text-white tracking-tight mb-2 transition-colors">6+ Top-Tier Publications</h3>
+                            <p class="text-base text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors">
+                                Published in <span class="text-zinc-200">Nature Computational Materials, JACS, ACS Cent. Sci.,</span> and <span class="text-zinc-200">Nano Letters</span> as first or equal-contribution author.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Row 02 -->
+                    <article class="group flex flex-col md:flex-row items-baseline gap-4 md:gap-10 py-10 border-b border-white/5 hover:border-white/20 transition-all duration-500">
+                        <div class="md:w-14 shrink-0">
+                            <span class="text-xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-cyanAccent to-purpleAccent opacity-80 group-hover:opacity-100 transition-opacity">02</span>
+                        </div>
+                        <div class="flex-1 transform group-hover:translate-x-2 transition-transform duration-500">
+                            <h3 class="text-xl md:text-2xl font-semibold text-zinc-100 group-hover:text-white tracking-tight mb-2 transition-colors">6+ Production Pipelines in Igniva™</h3>
+                            <p class="text-base text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors">
+                                Built <span class="text-zinc-200">CrystalCleanPro, CrystalLatticeAI, MolConSUL Pro, SitepKa, QM-pKa,</span> and ADMET platforms — shipped as part of Aganitha's commercial Agentic AI product.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Row 03 -->
+                    <article class="group flex flex-col md:flex-row items-baseline gap-4 md:gap-10 py-10 border-b border-white/5 hover:border-white/20 transition-all duration-500">
+                        <div class="md:w-14 shrink-0">
+                            <span class="text-xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-cyanAccent to-purpleAccent opacity-80 group-hover:opacity-100 transition-opacity">03</span>
+                        </div>
+                        <div class="flex-1 transform group-hover:translate-x-2 transition-transform duration-500">
+                            <h3 class="text-xl md:text-2xl font-semibold text-zinc-100 group-hover:text-white tracking-tight mb-2 transition-colors">AI Agent for Lead Optimization</h3>
+                            <p class="text-base text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors">
+                                Autonomous medicinal chemistry agent using <span class="text-zinc-200">Claude AI</span> with iterative propose-score-compare loops for drug lead optimization.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Row 04 -->
+                    <article class="group flex flex-col md:flex-row items-baseline gap-4 md:gap-10 py-10 border-b border-white/5 hover:border-white/20 transition-all duration-500">
+                        <div class="md:w-14 shrink-0">
+                            <span class="text-xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-cyanAccent to-purpleAccent opacity-80 group-hover:opacity-100 transition-opacity">04</span>
+                        </div>
+                        <div class="flex-1 transform group-hover:translate-x-2 transition-transform duration-500">
+                            <h3 class="text-xl md:text-2xl font-semibold text-zinc-100 group-hover:text-white tracking-tight mb-2 transition-colors">End-to-End Drug Discovery Platform</h3>
+                            <p class="text-base text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors">
+                                Full-stack triage app (<span class="text-zinc-200">React, FastAPI, RDKit</span>) with real-time ADMET, QED, and PAINS screening deployed on Vercel.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="lab-border pb-24 scroll-mt-24 relative">
+            <div class="absolute right-0 top-0 opacity-[0.03] pointer-events-none">
+                <i class="ph ph-graph text-[20rem]"></i>
+            </div>
+            <div class="mb-12 flex items-center gap-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Computational Stack</h2>
+                <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Pod 1: AI/ML -->
+                <div class="group border border-white/8 border-t-2 border-t-cyanAccent bg-surfaceElevated p-6 hover:border-cyanAccent/40 hover:bg-[#0f1a1f] transition-all relative overflow-hidden">
+                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-cyanAccent/15 flex items-center justify-center group-hover:bg-cyanAccent/25 transition-colors">
+                        <i class="ph ph-brain text-2xl text-cyanAccent"></i>
+                    </div>
+                    <div class="font-mono text-xs text-cyanAccent mb-5 flex items-center gap-2 pr-12">
+                        <i class="ph ph-caret-right"></i> AI/ML for Drug Discovery
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Graph Neural Networks</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>PyTorch / TensorFlow</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Transformers</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>ADMET Prediction</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>AI Agents</li>
+                    </ul>
+                </div>
+
+                <!-- Pod 2: Comp. Chem -->
+                <div class="group border border-white/8 border-t-2 border-t-purpleAccent bg-surfaceElevated p-6 hover:border-purpleAccent/40 hover:bg-[#130f1f] transition-all relative overflow-hidden">
+                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-purpleAccent/15 flex items-center justify-center group-hover:bg-purpleAccent/25 transition-colors">
+                        <i class="ph ph-flask text-2xl text-purpleAccent"></i>
+                    </div>
+                    <div class="font-mono text-xs text-purpleAccent mb-5 flex items-center gap-2 pr-12">
+                        <i class="ph ph-caret-right"></i> Computational Chemistry
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>CP2K / ORCA / PySCF</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>DFT / SAPT</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>ML Force Fields</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>Molecular Docking</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>pKa Prediction</li>
+                    </ul>
+                </div>
+
+                <!-- Pod 3: Cheminformatics -->
+                <div class="group border border-white/8 border-t-2 border-t-pinkAccent bg-surfaceElevated p-6 hover:border-pinkAccent/40 hover:bg-[#1a0f17] transition-all relative overflow-hidden">
+                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-pinkAccent/15 flex items-center justify-center group-hover:bg-pinkAccent/25 transition-colors">
+                        <i class="ph ph-dna text-2xl text-pinkAccent"></i>
+                    </div>
+                    <div class="font-mono text-xs text-pinkAccent mb-5 flex items-center gap-2 pr-12">
+                        <i class="ph ph-caret-right"></i> Cheminformatics
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>RDKit / ASE</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>SMILES / SMARTS</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>Conformer Generation</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>Crystal Structure Pred.</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>ADMET Workflows</li>
+                    </ul>
+                </div>
+
+                <!-- Pod 4: MLOps & Languages -->
+                <div class="group border border-white/8 border-t-2 border-t-zinc-400 bg-surfaceElevated p-6 hover:border-zinc-400/40 hover:bg-[#141418] transition-all relative overflow-hidden">
+                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-zinc-400/15 flex items-center justify-center group-hover:bg-zinc-400/25 transition-colors">
+                        <i class="ph ph-hard-drives text-2xl text-zinc-300"></i>
+                    </div>
+                    <div class="font-mono text-xs text-zinc-300 mb-5 flex items-center gap-2 pr-12">
+                        <i class="ph ph-caret-right"></i> MLOps &amp; Languages
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Python (Expert)</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Docker / Azure</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>CI/CD / MLflow</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>NumPy / Pandas</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Fortran / Bash</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="lab-border pb-24 scroll-mt-24">
+            <div class="mb-12 flex items-center gap-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Projects &amp; Research</h2>
+                <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+            </div>
+
+            <!-- Current Work Banner -->
+            <div class="mb-8 border border-cyanAccent/20 bg-[#07100f] relative overflow-hidden">
+                <!-- Header row -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-6 pt-6 pb-4 border-b border-white/5">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+                            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest">Scientist · Aganitha Cognitive Solutions · Jan 2024 – Present</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Production AI/ML Pipelines for Pharmaceutical R&amp;D</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 flex-shrink-0">
+                        <span class="px-2 py-1 text-[10px] font-mono text-cyanAccent bg-cyanAccent/10 border border-cyanAccent/20">PyTorch</span>
+                        <span class="px-2 py-1 text-[10px] font-mono text-zinc-400 bg-white/5 border border-white/10">GNNs</span>
+                        <span class="px-2 py-1 text-[10px] font-mono text-zinc-400 bg-white/5 border border-white/10">RDKit</span>
+                        <span class="px-2 py-1 text-[10px] font-mono text-zinc-400 bg-white/5 border border-white/10">CP2K</span>
+                        <span class="px-2 py-1 text-[10px] font-mono text-zinc-400 bg-white/5 border border-white/10">Docker</span>
+                        <span class="px-2 py-1 text-[10px] font-mono text-zinc-400 bg-white/5 border border-white/10">Azure</span>
+                    </div>
+                </div>
+                <!-- 4-item work grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+                    <div class="p-5 hover:bg-white/3 transition-colors group/item">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="ph ph-crystal-ball text-lg text-cyanAccent"></i>
+                            <h4 class="text-sm font-semibold text-white">Crystal Structure Prediction</h4>
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed">GNN pipeline for rapid polymorph screening of drug-like molecules — predicting stable crystal forms critical to formulation.</p>
+                    </div>
+                    <div class="p-5 hover:bg-white/3 transition-colors group/item border-t sm:border-t-0 border-white/5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="ph ph-arrows-clockwise text-lg text-cyanAccent"></i>
+                            <h4 class="text-sm font-semibold text-white">Conformer Generation</h4>
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Environment-aware AI platform generating realistic 3D conformers accounting for solvent and protein-pocket context.</p>
+                    </div>
+                    <div class="p-5 hover:bg-white/3 transition-colors group/item border-t lg:border-t-0 border-white/5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="ph ph-atom text-lg text-cyanAccent"></i>
+                            <h4 class="text-sm font-semibold text-white">pKa Estimation</h4>
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Dual-model approach — QM-based and GNN-based — for accurate pKa prediction under non-aqueous conditions.</p>
+                    </div>
+                    <div class="p-5 hover:bg-white/3 transition-colors group/item border-t lg:border-t-0 border-white/5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="ph ph-flask text-lg text-cyanAccent"></i>
+                            <h4 class="text-sm font-semibold text-white">ADMET Prediction</h4>
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Physics-based QM platform predicting solubility, logP, and solvation energy for high-accuracy ADMET profiling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-6">
+
+                <!-- Card 1: Drug Discovery Triage Platform -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(0,240,255,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                             alt="Drug Discovery Lab"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-cyanAccent/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-cyanAccent uppercase tracking-widest">Featured</span>
+                            <div>
+                                <i class="ph ph-microscope text-5xl text-cyanAccent mb-3 block drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Full-Stack · Live Demo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-cyanAccent transition-colors leading-tight mb-3">Drug Discovery Triage Platform</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                Full-stack drug discovery triage application with real-time ADMET property predictions, QED scoring, PAINS alerts, and interactive 2D molecular visualization for rapid compound screening.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Real-time ADMET: lipophilicity, solubility, permeability</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> QED drug-likeness scoring &amp; PAINS substructure alerts</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Dockerized deployment with CI/CD pipeline</li>
                             </ul>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/drug-discovery-triage" target="_blank" class="project-link">
-                                View on GitHub →
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">React + TypeScript</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">FastAPI</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit</span>
+                            <a href="https://github.com/mondalsou/drug-discovery-triage" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                                <i class="ph ph-github-logo"></i> GitHub
                             </a>
-                            <a href="https://drug-discovery-triage.vercel.app" target="_blank" class="project-link demo-link">
-                                Live Demo →
+                            <a href="https://drug-discovery-triage.vercel.app" target="_blank" class="px-3 py-1 text-[11px] font-mono text-cyanAccent bg-cyanAccent/10 border border-cyanAccent/20 hover:bg-cyanAccent/20 transition-colors flex items-center gap-1">
+                                Live Demo <i class="ph ph-arrow-up-right"></i>
                             </a>
                         </div>
                     </div>
+                </article>
 
-                    <div class="project-card featured">
-                        <div class="project-header">
-                            <h3>Solubility Dual-Graph GNN</h3>
-                            <span class="project-tag">Graph Neural Networks</span>
-                            <span class="project-tag new-badge">New!</span>
+                <!-- Card 2: Solubility Dual-Graph GNN -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(138,43,226,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&w=800&q=80"
+                             alt="Molecular graph network"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-purpleAccent/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-purpleAccent uppercase tracking-widest">GNN · R²=0.90</span>
+                            <div>
+                                <i class="ph ph-graph text-5xl text-purpleAccent mb-3 block drop-shadow-[0_0_8px_rgba(138,43,226,0.9)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Graph Neural Networks</p>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            Dual-graph interaction GNN for predicting molecular solubility (logS) from solute-solvent
-                            SMILES pairs. Models explicit solute-solvent interactions via bidirectional cross-attention,
-                            trained on 100K+ pairs from BigSolDB 2.0. Achieves R² = 0.90.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">PyTorch</span>
-                            <span class="feature-badge">MPNN</span>
-                            <span class="feature-badge">Cross-Attention</span>
-                            <span class="feature-badge">RDKit</span>
-                            <span class="feature-badge">MLflow</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Dual-graph: separate MPNN encoders for solute & solvent</li>
-                                <li>Bidirectional cross-attention for interaction modeling</li>
-                                <li>100,983 solute-solvent pairs (BigSolDB 2.0)</li>
-                                <li>R² = 0.90, RMSE = 0.388, MAE = 0.290</li>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-purpleAccent transition-colors leading-tight mb-3">Solubility Dual-Graph GNN</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                Dual-graph interaction GNN predicting molecular solubility (logS) from solute-solvent SMILES pairs. Bidirectional cross-attention mechanism trained on 100K+ BigSolDB 2.0 pairs achieves <strong class="text-white">R² = 0.90</strong>, RMSE = 0.388.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-purpleAccent"></i> Separate MPNN encoders for solute &amp; solvent graphs</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-purpleAccent"></i> Bidirectional cross-attention for interaction modeling</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-purpleAccent"></i> 100,983 solute-solvent pairs from BigSolDB 2.0</li>
                             </ul>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/solubility-dual-graph-gnn" target="_blank" class="project-link">
-                                View on GitHub →
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">PyTorch · MPNN</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Cross-Attention</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">MLflow</span>
+                            <a href="https://github.com/mondalsou/solubility-dual-graph-gnn" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                                <i class="ph ph-github-logo"></i> GitHub
                             </a>
                         </div>
                     </div>
+                </article>
 
-                    <div class="project-card featured">
-                        <div class="project-header">
-                            <h3>Lead Optimization Agent</h3>
-                            <span class="project-tag">AI Agents</span>
-                            <span class="project-tag new-badge">New!</span>
+                <!-- Card 3: Lead Optimization Agent -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(255,128,181,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=800&q=80"
+                             alt="Molecule structure visualization"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-pinkAccent/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-pinkAccent uppercase tracking-widest">AI Agents</span>
+                            <div>
+                                <i class="ph ph-robot text-5xl text-pinkAccent mb-3 block drop-shadow-[0_0_8px_rgba(255,128,181,0.9)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Claude AI · HuggingFace</p>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            AI-powered medicinal chemistry sandbox using Claude to iteratively propose and score
-                            structural modifications. Combines an Anthropic agent loop with RDKit property analysis
-                            and a Streamlit UI showing per-attempt change rationale and property trajectories.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">Claude AI</span>
-                            <span class="feature-badge">RDKit</span>
-                            <span class="feature-badge">Streamlit</span>
-                            <span class="feature-badge">AI Agents</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Autonomous agent loop: propose → score → compare → iterate</li>
-                                <li>BBB, CNS MPO, QED, and flexibility tracking per attempt</li>
-                                <li>Highlighted 2D structures showing structural changes</li>
-                                <li>Local run persistence — resume without extra LLM cost</li>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-pinkAccent transition-colors leading-tight mb-3">Lead Optimization Agent</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                AI-powered medicinal chemistry sandbox using Claude to iteratively propose and score structural modifications. Autonomous loop: propose → score → compare → iterate with full property trajectory tracking.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> BBB, CNS MPO, QED, and flexibility tracked per attempt</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Highlighted 2D structures showing structural changes</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Local run persistence — resume without extra LLM cost</li>
                             </ul>
                         </div>
-                        <div class="project-links">
-                            <a href="https://huggingface.co/spaces/mondalsou/lead_optimization_agent" target="_blank" class="project-link primary">
-                                Live Demo →
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Claude AI</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit · Streamlit</span>
+                            <a href="https://github.com/mondalsou/lead-optimization-agent" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                                <i class="ph ph-github-logo"></i> GitHub
                             </a>
-                            <a href="https://github.com/mondalsou/lead-optimization-agent" target="_blank" class="project-link">
-                                View on GitHub →
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <!-- Deep Learning & Neural Networks -->
-            <div class="project-category">
-                <h3 class="category-title">🧠 Deep Learning & Neural Networks</h3>
-                <div class="projects-grid">
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>PyTorch Deep Learning</h3>
-                            <span class="project-tag">Deep Learning</span>
-                        </div>
-                        <p class="project-description">
-                            Comprehensive implementation of fully connected neural networks with PyTorch. 
-                            Focus on model optimization, convergence analysis, and production-ready architectures.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">PyTorch</span>
-                            <span class="feature-badge">Neural Networks</span>
-                            <span class="feature-badge">Model Optimization</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>PyTorch modeling and optimization techniques</li>
-                                <li>Data balancing and sampling strategies</li>
-                                <li>Model convergence analysis</li>
-                                <li>Overfitting/underfitting prevention</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/pytorch-deep-learning" target="_blank" class="project-link">
-                                View on GitHub →
+                            <a href="https://huggingface.co/spaces/mondalsou/lead_optimization_agent" target="_blank" class="px-3 py-1 text-[11px] font-mono text-pinkAccent bg-pinkAccent/10 border border-pinkAccent/20 hover:bg-pinkAccent/20 transition-colors flex items-center gap-1">
+                                Live Demo <i class="ph ph-arrow-up-right"></i>
                             </a>
                         </div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Image Classification</h3>
-                            <span class="project-tag">Computer Vision</span>
-                        </div>
-                        <p class="project-description">
-                            Image classification using pre-trained models and transfer learning. 
-                            Demonstrates ability to leverage existing models for new tasks.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">Transfer Learning</span>
-                            <span class="feature-badge">Computer Vision</span>
-                            <span class="feature-badge">CNN</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Cats and Dogs image classification</li>
-                                <li>Fine-tuning pre-trained networks</li>
-                                <li>Computer vision pipeline development</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/image-classification-transfer-learning" target="_blank" class="project-link">
-                                View on GitHub →
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Machine Learning Fundamentals -->
-            <div class="project-category">
-                <h3 class="category-title">📊 Machine Learning Fundamentals</h3>
-                <div class="projects-grid">
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>ML Pipelines</h3>
-                            <span class="project-tag">Classical ML</span>
-                        </div>
-                        <p class="project-description">
-                            Comprehensive ML pipelines covering both classification and regression. 
-                            Demonstrates end-to-end ML workflow from data preprocessing to model evaluation.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">Random Forest</span>
-                            <span class="feature-badge">Scikit-learn</span>
-                            <span class="feature-badge">Feature Engineering</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Classification and regression problems</li>
-                                <li>Feature scaling and dimensionality reduction</li>
-                                <li>K-fold cross-validation</li>
-                                <li>Data balancing and model evaluation</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/ml-classification-pipeline" target="_blank" class="project-link">
-                                Classification →
-                            </a>
-                            <a href="https://github.com/mondalsou/ml-regression-pipeline" target="_blank" class="project-link">
-                                Regression →
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Clustering Algorithms</h3>
-                            <span class="project-tag">Clustering</span>
-                        </div>
-                        <p class="project-description">
-                            Implementation of clustering algorithms for pattern discovery and data exploration. 
-                            Essential techniques for molecular similarity and compound clustering.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">K-means</span>
-                            <span class="feature-badge">Hierarchical</span>
-                            <span class="feature-badge">Clustering</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>K-means clustering implementation</li>
-                                <li>Hierarchical clustering methods</li>
-                                <li>Cluster analysis and visualization</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/clustering-kmeans-hierarchical" target="_blank" class="project-link">
-                                View on GitHub →
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Quantum Chemistry & Materials Science -->
-            <div class="project-category">
-                <h3 class="category-title">⚛️ Quantum Chemistry & Materials Science</h3>
-                <div class="projects-grid">
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Quantum Property Prediction</h3>
-                            <span class="project-tag">Materials ML</span>
-                        </div>
-                        <p class="project-description">
-                            Neural network models for predicting quantum properties of materials, specifically
-                            Nitrogen Vacancy centers in diamond. Demonstrates ML application to quantum systems.
-                        </p>
-                        <div class="project-features">
-                            <span class="feature-badge">Neural Networks</span>
-                            <span class="feature-badge">Quantum Properties</span>
-                            <span class="feature-badge">Materials Science</span>
-                        </div>
-                        <div class="project-highlights">
-                            <ul>
-                                <li>Property prediction from structural features</li>
-                                <li>Quantum mechanical property modeling</li>
-                                <li>Feature engineering for materials science</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/mondalsou/quantum-property-prediction-nn" target="_blank" class="project-link">
-                                View on GitHub →
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <p class="publications-intro">
-                Published in top-tier journals including <strong>Nature Computational Materials</strong>, <strong>JACS</strong>, and <strong>Nano Letters</strong>
-            </p>
-            
-            <div class="publications-grid">
-                
-                <!-- Publication 0: ACS Central Science 2025 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container jacs">
-                        <div class="journal-logo">
-                            <span class="logo-text">ACS</span>
-                            <span class="logo-subtext">Cent. Sci.</span>
-                        </div>
-                        <div class="journal-year">2025</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">The spin phonon relaxation of single molecules magnet in the presence of strong exchange coupling</h3>
-                        <p class="publication-authors"><strong>Sourav Mondal</strong>, Julia Netz et al.</p>
-                        <p class="publication-journal">ACS Cent. Sci. (2025)</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">Molecular Magnets</span>
-                            <span class="pub-tag">Spin Relaxation</span>
-                            <span class="pub-tag">Exchange Coupling</span>
-                        </div>
-                        <a href="#" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
-
-                <!-- Publication 1: npj Computational Materials 2023 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container nature">
-                        <div class="journal-logo">
-                            <span class="logo-text">npj</span>
-                            <span class="logo-subtext">Computational Materials</span>
-                        </div>
-                        <div class="journal-year">2023</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">Spin-phonon decoherence in solid-state paramagnetic defects from first principles</h3>
-                        <p class="publication-authors"><strong>Sourav Mondal</strong> and A. Lunghi</p>
-                        <p class="publication-journal">npj Comput. Mat. (2023)</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">Quantum Computing</span>
-                            <span class="pub-tag">First Principles</span>
-                            <span class="pub-tag">Spin Dynamics</span>
-                        </div>
-                        <a href="https://www.nature.com/articles/s41524-023-00952-y" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
-
-                <!-- Publication 2: JACS 2022 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container jacs">
-                        <div class="journal-logo">
-                            <span class="logo-text">JACS</span>
-                            <span class="logo-subtext">J. Am. Chem. Soc.</span>
-                        </div>
-                        <div class="journal-year">2022</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">Unravelling the contributions to spin-lattice relaxation in Kramers single-molecule magnets</h3>
-                        <p class="publication-authors"><strong>Sourav Mondal</strong> and A. Lunghi</p>
-                        <p class="publication-journal">J. Am. Chem. Soc., 50, 22965 (2022)</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">Molecular Magnets</span>
-                            <span class="pub-tag">Machine Learning</span>
-                            <span class="pub-tag">Spin Relaxation</span>
-                        </div>
-                        <a href="https://pubs.acs.org/doi/10.1021/jacs.2c08876" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
-
-                <!-- Publication 3: J. Phys. Chem. Lett 2022 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container jpcl">
-                        <div class="journal-logo">
-                            <span class="logo-text">JPCL</span>
-                            <span class="logo-subtext">J. Phys. Chem. Lett.</span>
-                        </div>
-                        <div class="journal-year">2022</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">Identification and Manipulation of Defects in Black Phosphorus</h3>
-                        <p class="publication-authors">R. Harsh, <strong>Sourav Mondal*</strong>, D. Sharma, M. Bouatou, et al.</p>
-                        <p class="publication-journal">J. Phys. Chem. Lett, 13, 6276 (2022)</p>
-                        <p class="publication-note">* Equally Contributed</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">2D Materials</span>
-                            <span class="pub-tag">DFT</span>
-                            <span class="pub-tag">STM</span>
-                        </div>
-                        <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.2c01235" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
-
-                <!-- Publication 4: Nano Letters 2020 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container nano">
-                        <div class="journal-logo">
-                            <span class="logo-text">Nano</span>
-                            <span class="logo-subtext">Letters</span>
-                        </div>
-                        <div class="journal-year">2020</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">Direct Observation of the Reduction of a Molecule on a Nitrogen pair in Doped Graphene</h3>
-                        <p class="publication-authors">M. Bouatou, <strong>Sourav Mondal*</strong>, C. Chacon, F. Joucken, et al.</p>
-                        <p class="publication-journal">Nano Letters, 20, 6908 (2020)</p>
-                        <p class="publication-note">* Equally Contributed</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">Graphene</span>
-                            <span class="pub-tag">Molecular Adsorption</span>
-                            <span class="pub-tag">STM Spectroscopy</span>
-                        </div>
-                        <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.0c02039" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
-
-                <!-- Publication 5: J. Phys. Chem. Lett 2019 -->
-                <div class="publication-item">
-                    <div class="journal-logo-container jpcl">
-                        <div class="journal-logo">
-                            <span class="logo-text">JPCL</span>
-                            <span class="logo-subtext">J. Phys. Chem. Lett.</span>
-                        </div>
-                        <div class="journal-year">2019</div>
-                    </div>
-                    <div class="publication-content">
-                        <h3 class="publication-title">Importance of Epitaxial Strain at a Spin-Crossover Molecule Metal Interface</h3>
-                        <p class="publication-authors">C. Fourmental, <strong>Sourav Mondal*</strong>, R. Banerjee, A. Bellec, et al.</p>
-                        <p class="publication-journal">J. Phys. Chem. Lett, 10, 4103 (2019)</p>
-                        <p class="publication-note">* Equally Contributed</p>
-                        <div class="publication-tags">
-                            <span class="pub-tag">Spin Crossover</span>
-                            <span class="pub-tag">Surface Science</span>
-                            <span class="pub-tag">DFT</span>
-                        </div>
-                        <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01303" target="_blank" class="publication-link">View Paper →</a>
-                    </div>
-                </div>
+                </article>
 
             </div>
-            
-            <div class="publications-footer">
-                <p>For a complete list of publications, visit my <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank">Google Scholar</a> profile.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
-            
-            <div class="timeline">
-                <!-- Current Position -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Scientist</h3>
-                            <span class="timeline-date">Jan 2024 - Present</span>
-                        </div>
-                        <p class="timeline-company">Aganitha Cognitive Solutions - Hyderabad</p>
-                        <ul class="timeline-details">
-                            <li>Developing CSP pipelines with Graph Neural Networks for drug polymorph prediction</li>
-                            <li>Building AI models for conformer generation, pKa prediction, and ADMET properties</li>
-                            <li>Creating workflows for thermodynamics: solubility, logP, and solvation energy</li>
-                            <li>Managing projects, client communications, and proposal writing</li>
+        <!-- PUBLICATIONS -->
+        <section id="publications" class="lab-border pb-24 scroll-mt-24">
+            <div class="mb-12 flex items-center gap-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Selected Publications</h2>
+                <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+            </div>
+            <p class="text-zinc-500 text-sm font-mono mb-8 -mt-6">Published in Nature Computational Materials · JACS · Nano Letters · J. Phys. Chem. Lett.</p>
+
+            <div class="flex flex-col border border-white/5 bg-[#0a0a0f]/50">
+
+                <a href="#" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 border-b border-white/5 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2025</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">ACS Cent. Sci.</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">The spin phonon relaxation of single molecules magnet in the presence of strong exchange coupling</h4>
+                        <p class="text-sm text-zinc-500 font-light"><span class="font-medium text-zinc-300">Sourav Mondal</span>, Julia Netz et al.</p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.nature.com/articles/s41524-023-00952-y" target="_blank" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 border-b border-white/5 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2023</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">npj Comput. Mat.</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">Spin-phonon decoherence in solid-state paramagnetic defects from first principles</h4>
+                        <p class="text-sm text-zinc-500 font-light"><span class="font-medium text-zinc-300">Sourav Mondal</span> and A. Lunghi</p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+                <a href="https://pubs.acs.org/doi/10.1021/jacs.2c08876" target="_blank" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 border-b border-white/5 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2022</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">JACS</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">Unravelling the contributions to spin-lattice relaxation in Kramers single-molecule magnets</h4>
+                        <p class="text-sm text-zinc-500 font-light"><span class="font-medium text-zinc-300">Sourav Mondal</span> and A. Lunghi &mdash; J. Am. Chem. Soc., 50, 22965</p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+                <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.2c01235" target="_blank" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 border-b border-white/5 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2022</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">J. Phys. Chem. Lett.</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">Identification and Manipulation of Defects in Black Phosphorus</h4>
+                        <p class="text-sm text-zinc-500 font-light">R. Harsh, <span class="font-medium text-zinc-300">Sourav Mondal*</span>, D. Sharma et al. &mdash; 13, 6276 &nbsp;<span class="text-zinc-600">*Equal contribution</span></p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+                <a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.0c02039" target="_blank" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 border-b border-white/5 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2020</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">Nano Letters</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">Direct Observation of the Reduction of a Molecule on a Nitrogen pair in Doped Graphene</h4>
+                        <p class="text-sm text-zinc-500 font-light">M. Bouatou, <span class="font-medium text-zinc-300">Sourav Mondal*</span>, C. Chacon et al. &mdash; 20, 6908 &nbsp;<span class="text-zinc-600">*Equal contribution</span></p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+                <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.9b01303" target="_blank" class="pub-row group flex flex-col md:flex-row items-baseline gap-4 md:gap-8 p-6 lg:p-8 hover:bg-[#12121a] transition-all">
+                    <div class="w-full md:w-52 flex-shrink-0 flex items-center gap-3">
+                        <span class="font-mono text-zinc-500 text-sm">2019</span>
+                        <span class="pub-chip px-2 py-1 bg-white/5 border border-white/10 font-mono text-[10px] uppercase tracking-wide text-zinc-400 whitespace-nowrap transition-colors">J. Phys. Chem. Lett.</span>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-base font-medium text-zinc-200 group-hover:text-white mb-2 leading-snug">Importance of Epitaxial Strain at a Spin-Crossover Molecule Metal Interface</h4>
+                        <p class="text-sm text-zinc-500 font-light">C. Fourmental, <span class="font-medium text-zinc-300">Sourav Mondal*</span>, R. Banerjee et al. &mdash; 10, 4103 &nbsp;<span class="text-zinc-600">*Equal contribution</span></p>
+                    </div>
+                    <div class="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity">
+                        <i class="ph ph-arrow-right text-cyanAccent text-xl"></i>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="mt-6 flex justify-end">
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" class="text-xs font-mono text-cyanAccent hover:text-white flex items-center gap-2 border-b border-cyanAccent/30 pb-0.5 transition-colors">
+                    View complete bibliography on Google Scholar <i class="ph ph-arrow-up-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="lab-border pb-24 scroll-mt-24">
+            <div class="mb-12 flex items-center gap-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Experience &amp; Education</h2>
+                <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+            </div>
+
+            <div class="flex flex-col gap-0 border border-white/5">
+
+                <!-- Current -->
+                <div class="group flex flex-col md:flex-row gap-0 border-b border-white/5 hover:bg-surfaceElevated transition-colors">
+                    <div class="md:w-64 flex-shrink-0 p-6 border-b md:border-b-0 md:border-r border-white/5">
+                        <p class="font-mono text-xs text-cyanAccent uppercase tracking-widest mb-1">Current</p>
+                        <p class="font-mono text-xs text-zinc-500">Jan 2024 – Present</p>
+                    </div>
+                    <div class="flex-1 p-6">
+                        <h3 class="text-lg font-semibold text-white mb-1">Scientist</h3>
+                        <p class="text-cyanAccent/80 text-sm font-mono mb-3">Aganitha Cognitive Solutions · Hyderabad</p>
+                        <ul class="text-sm text-zinc-400 space-y-1">
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-cyanAccent/60 mt-0.5 flex-shrink-0"></i> Developing CSP pipelines with Graph Neural Networks for drug polymorph prediction</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-cyanAccent/60 mt-0.5 flex-shrink-0"></i> Building AI models for conformer generation, pKa prediction, and ADMET properties</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-cyanAccent/60 mt-0.5 flex-shrink-0"></i> Creating thermodynamic workflows: solubility, logP, and solvation energy</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-cyanAccent/60 mt-0.5 flex-shrink-0"></i> Managing projects, client communications, and proposal writing</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- QpiVolta -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Computational Scientist & Deep Learning Engineer</h3>
-                            <span class="timeline-date">Aug 2023 - Dec 2023</span>
-                        </div>
-                        <p class="timeline-company">QpiVolta Technologies - Bangalore</p>
-                        <ul class="timeline-details">
-                            <li>Developed machine learning force fields for solid-state electrolytes</li>
-                            <li>Modeled thermodynamic properties using molecular dynamics</li>
-                            <li>Led contract research on complex biological systems simulation</li>
+                <div class="group flex flex-col md:flex-row gap-0 border-b border-white/5 hover:bg-surfaceElevated transition-colors">
+                    <div class="md:w-64 flex-shrink-0 p-6 border-b md:border-b-0 md:border-r border-white/5">
+                        <p class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-1">Previous</p>
+                        <p class="font-mono text-xs text-zinc-500">Aug 2023 – Dec 2023</p>
+                    </div>
+                    <div class="flex-1 p-6">
+                        <h3 class="text-lg font-semibold text-white mb-1">Computational Scientist &amp; Deep Learning Engineer</h3>
+                        <p class="text-purpleAccent/80 text-sm font-mono mb-3">QpiVolta Technologies · Bangalore</p>
+                        <ul class="text-sm text-zinc-400 space-y-1">
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-purpleAccent/60 mt-0.5 flex-shrink-0"></i> Developed machine learning force fields for solid-state electrolytes</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-purpleAccent/60 mt-0.5 flex-shrink-0"></i> Modeled thermodynamic properties using molecular dynamics</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-purpleAccent/60 mt-0.5 flex-shrink-0"></i> Led contract research on complex biological systems simulation</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Postdoc -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Postdoctoral Researcher</h3>
-                            <span class="timeline-date">Mar 2021 - Jul 2023</span>
-                        </div>
-                        <p class="timeline-company">Trinity College Dublin - Ireland</p>
-                        <ul class="timeline-details">
-                            <li>Built neural network models for quantum property prediction</li>
-                            <li>Developed computational methods for spin dynamics simulation</li>
-                            <li>Published in Nature Computational Materials and JACS</li>
-                            <li>Combined ab-initio methods with machine learning approaches</li>
+                <div class="group flex flex-col md:flex-row gap-0 border-b border-white/5 hover:bg-surfaceElevated transition-colors">
+                    <div class="md:w-64 flex-shrink-0 p-6 border-b md:border-b-0 md:border-r border-white/5">
+                        <p class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-1">Postdoc</p>
+                        <p class="font-mono text-xs text-zinc-500">Mar 2021 – Jul 2023</p>
+                    </div>
+                    <div class="flex-1 p-6">
+                        <h3 class="text-lg font-semibold text-white mb-1">Postdoctoral Researcher</h3>
+                        <p class="text-zinc-400 text-sm font-mono mb-3">Trinity College Dublin · Ireland</p>
+                        <ul class="text-sm text-zinc-400 space-y-1">
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Built neural network models for quantum property prediction</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Developed computational methods for spin dynamics simulation</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Published in Nature Computational Materials and JACS</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Combined ab-initio methods with machine learning approaches</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- PhD -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>PhD in Computational Material Science</h3>
-                            <span class="timeline-date">Jan 2015 - Feb 2021</span>
-                        </div>
-                        <p class="timeline-company">JNCASR - Bangalore</p>
-                        <ul class="timeline-details">
-                            <li>Thesis: Tailoring Properties of 2D Systems via Molecular Adsorption and Defect Engineering</li>
-                            <li>Employed DFT to study electronic and magnetic properties of 2D materials</li>
-                            <li>Published in top-tier journals including Nano Letters and J. Phys. Chem. Letters</li>
-                            <li>Received CEFIPRA grant for research visits to Paris</li>
+                <div class="group flex flex-col md:flex-row gap-0 border-b border-white/5 hover:bg-surfaceElevated transition-colors">
+                    <div class="md:w-64 flex-shrink-0 p-6 border-b md:border-b-0 md:border-r border-white/5">
+                        <p class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-1">PhD</p>
+                        <p class="font-mono text-xs text-zinc-500">Jan 2015 – Feb 2021</p>
+                    </div>
+                    <div class="flex-1 p-6">
+                        <h3 class="text-lg font-semibold text-white mb-1">PhD in Computational Material Science</h3>
+                        <p class="text-zinc-400 text-sm font-mono mb-3">JNCASR · Bangalore</p>
+                        <ul class="text-sm text-zinc-400 space-y-1">
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Thesis: Tailoring Properties of 2D Systems via Molecular Adsorption and Defect Engineering</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> DFT study of electronic and magnetic properties of 2D materials</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Published in Nano Letters and J. Phys. Chem. Letters</li>
+                            <li class="flex items-start gap-2"><i class="ph ph-caret-right text-zinc-500 mt-0.5 flex-shrink-0"></i> Received CEFIPRA grant for research visits to Paris</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- M.Sc -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>M.Sc in Chemistry</h3>
-                            <span class="timeline-date">2012 - 2014</span>
-                        </div>
-                        <p class="timeline-company">IIT Guwahati</p>
-                        <ul class="timeline-details">
-                            <li>Qualified NET CSIR-UGC Junior/Senior Research Fellowship</li>
-                        </ul>
+                <!-- MSc -->
+                <div class="group flex flex-col md:flex-row gap-0 hover:bg-surfaceElevated transition-colors">
+                    <div class="md:w-64 flex-shrink-0 p-6 border-b md:border-b-0 md:border-r border-white/5">
+                        <p class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-1">M.Sc</p>
+                        <p class="font-mono text-xs text-zinc-500">2012 – 2014</p>
                     </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                
-                <div class="skill-category">
-                    <h3>🧬 AI/ML for Drug Discovery</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Graph Neural Networks</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">AI-Agents</span>
-                        <span class="skill-tag">Molecular ML</span>
-                        <span class="skill-tag">ADMET Prediction</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>⚗️ Computational Chemistry</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">CP2K</span>
-                        <span class="skill-tag">ORCA</span>
-                        <span class="skill-tag">psi-4</span>
-                        <span class="skill-tag">PySCF</span>
-                        <span class="skill-tag">DFT/SAPT</span>
-                        <span class="skill-tag">ML Force Fields</span>
-                        <span class="skill-tag">Docking</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>💊 Cheminformatics</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">RDKit</span>
-                        <span class="skill-tag">ASE</span>
-                        <span class="skill-tag">SMILES/SMARTS</span>
-                        <span class="skill-tag">Conformer Generation</span>
-                        <span class="skill-tag">pKa Prediction</span>
-                        <span class="skill-tag">ADMET</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🤖 Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Neural Networks</span>
-                        <span class="skill-tag">Random Forest</span>
-                        <span class="skill-tag">SVM</span>
-                        <span class="skill-tag">Clustering</span>
-                        <span class="skill-tag">Cross-validation</span>
-                        <span class="skill-tag">Hyperparameter Tuning</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>💻 Programming & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python (Expert)</span>
-                        <span class="skill-tag">Fortran</span>
-                        <span class="skill-tag">NumPy/Pandas</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">n8n</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>☁️ Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">MLOps</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📚 Research & Domain</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Drug Discovery</span>
-                        <span class="skill-tag">Materials Science</span>
-                        <span class="skill-tag">Quantum Chemistry</span>
-                        <span class="skill-tag">Scientific Computing</span>
-                        <span class="skill-tag">Publications (Nature, JACS)</span>
+                    <div class="flex-1 p-6">
+                        <h3 class="text-lg font-semibold text-white mb-1">M.Sc in Chemistry</h3>
+                        <p class="text-zinc-400 text-sm font-mono mb-3">IIT Guwahati</p>
+                        <p class="text-sm text-zinc-400">Qualified NET CSIR-UGC Junior/Senior Research Fellowship</p>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <p class="contact-intro">
-                    <strong>Actively seeking AI/ML Scientist positions in Drug Discovery & Pharmaceutical Research</strong>
-                </p>
-                <ul class="opportunity-list">
-                    <li><strong>AI/ML Scientist - Drug Discovery</strong> - Graph Neural Networks, Molecular Property Prediction, CADD</li>
-                    <li><strong>Computational Chemist - AI/ML</strong> - Quantum Chemistry, Cheminformatics, DFT</li>
-                    <li><strong>Machine Learning Engineer - Pharma/Biotech</strong> - Deep Learning, Model Development, MLOps</li>
-                    <li><strong>Research Scientist - Materials/Drug Discovery</strong> - First-Principle Calculations, AI-driven Design</li>
-                </ul>
-                <div class="why-hire-me">
-                    <h3>Why I'm a Strong Fit:</h3>
-                    <ul>
-                        <li>✅ Current pharmaceutical AI experience at Aganitha Cognitive Solutions</li>
-                        <li>✅ Deep expertise in quantum chemistry, molecular modeling & cheminformatics</li>
-                        <li>✅ Proven ML skills: PyTorch, TensorFlow, GNNs, production pipelines</li>
-                        <li>✅ Published in Nature Computational Materials, JACS, Nano Letters</li>
-                        <li>✅ PhD + Postdoc with 10+ years in computational science</li>
-                    </ul>
-                </div>
-                <p class="contact-cta">
-                    <strong>📍 Hyderabad, India</strong><br>
-                    📧 souravchembwn@gmail.com | 📱 +919740851654
-                </p>
-                <p class="contact-cta">
-                    Feel free to reach out to discuss opportunities or collaborations!
-                </p>
-                <div class="contact-links">
-                    <a href="https://github.com/mondalsou" target="_blank" class="contact-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/soura1/" target="_blank" class="contact-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="mailto:souravchembwn@gmail.com" class="contact-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-                        </svg>
-                        Email
-                    </a>
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="border-t border-white/5 bg-[#050508] relative z-20 py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center justify-center text-center gap-8">
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyanAccent/20 bg-cyanAccent/5 text-cyanAccent text-xs font-mono uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
+                Actively seeking AI/ML Scientist positions · Drug Discovery &amp; Pharma
+            </div>
+
+            <div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-2 hover:text-cyanAccent transition-colors duration-500">
+                    <a href="mailto:souravchembwn@gmail.com">souravchembwn@gmail.com</a>
+                </h2>
+                <p class="text-zinc-500 font-mono text-sm mt-3">Based in Hyderabad, India &nbsp;·&nbsp; +91 97408 51654</p>
+            </div>
+
+            <div class="flex items-center gap-4 mt-4">
+                <a href="https://github.com/mondalsou" target="_blank" class="w-10 h-10 flex items-center justify-center bg-surface border border-white/5 hover:border-cyanAccent hover:text-cyanAccent transition-all group" aria-label="GitHub">
+                    <i class="ph ph-github-logo text-xl text-zinc-400 group-hover:text-cyanAccent transition-colors"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/soura1/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-surface border border-white/5 hover:border-purpleAccent hover:text-purpleAccent transition-all group" aria-label="LinkedIn">
+                    <i class="ph ph-linkedin-logo text-xl text-zinc-400 group-hover:text-purpleAccent transition-colors"></i>
+                </a>
+                <a href="mailto:souravchembwn@gmail.com" class="w-10 h-10 flex items-center justify-center bg-surface border border-white/5 hover:border-pinkAccent hover:text-pinkAccent transition-all group" aria-label="Email">
+                    <i class="ph ph-envelope text-xl text-zinc-400 group-hover:text-pinkAccent transition-colors"></i>
+                </a>
+                <a href="Sourav_Mondal_CV.pdf" class="w-10 h-10 flex items-center justify-center bg-surface border border-white/5 hover:border-zinc-300 hover:text-white transition-all group" aria-label="CV">
+                    <i class="ph ph-file-text text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+                </a>
+            </div>
+
+            <div class="mt-8 text-zinc-600 font-mono text-[10px] uppercase tracking-widest flex flex-col md:flex-row gap-4 items-center justify-between w-full border-t border-white/5 pt-8">
+                <p>&copy; 2026 Sourav Mondal, PhD. All rights reserved.</p>
+                <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyanAccent animate-pulse"></span>
+                    AI/ML Scientist · Drug Discovery
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Sourav Mondal, PhD. All rights reserved.</p>
-            <p class="footer-note">Computational Scientist | AI/ML Engineer | Building intelligent systems at the intersection of science and technology</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => menu.classList.remove('open'));
+        });
+    </script>
 </body>
 </html>
