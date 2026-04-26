@@ -31,6 +31,7 @@
                         cyanAccent: '#00f0ff',
                         purpleAccent: '#8a2be2',
                         pinkAccent: '#ff80b5',
+                        amberAccent: '#f59e0b',
                     },
                     backgroundImage: {
                         'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M0 0h40v40H0V0zm39 39V1H1v38h38z\\' fill=\\'%23ffffff\\' fill-opacity=\\'0.02\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E')",
@@ -538,6 +539,47 @@
                             </a>
                             <a href="https://huggingface.co/spaces/mondalsou/lead_optimization_agent" target="_blank" class="px-3 py-1 text-[11px] font-mono text-pinkAccent bg-pinkAccent/10 border border-pinkAccent/20 hover:bg-pinkAccent/20 transition-colors flex items-center gap-1">
                                 Live Demo <i class="ph ph-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: GNN Bind Optimizer -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(245,158,11,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80"
+                             alt="Protein-ligand binding visualization"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-amber-500/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-amber-500 uppercase tracking-widest">GNN · RL · MLflow</span>
+                            <div>
+                                <i class="ph ph-push-pin text-5xl text-amber-400 mb-3 block drop-shadow-[0_0_8px_rgba(245,158,11,0.9)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Binding Affinity · REINFORCE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-amber-400 transition-colors leading-tight mb-3">GNN Bind Optimizer</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                Heterogeneous GNN for protein-ligand binding affinity prediction paired with a REINFORCE-based molecular generator. End-to-end pipeline with SQL Server persistence, MLflow experiment tracking, and an interactive Streamlit UI for pocket-aware ligand design.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-amber-400"></i> HGTConv heterogeneous GNN — MTL &amp; STL training modes</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-amber-400"></i> REINFORCE RL loop for pocket-conditioned molecule generation</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-amber-400"></i> Docker Compose full-stack: SQL Server + MLflow + Streamlit</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">PyTorch · PyG</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">REINFORCE · HGTConv</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">MLflow · Docker</span>
+                            <a href="https://github.com/mondalsou/gnn-bind-optimizer" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                                <i class="ph ph-github-logo"></i> GitHub
                             </a>
                         </div>
                     </div>
