@@ -1,0 +1,34 @@
+{
+  "id": "2026-04-03T12-24-49-965Z-dark-themed-portfolio-for-sourav-mon",
+  "createdAt": "2026-04-03T12:24:59.133Z",
+  "repoRoot": "/Users/sourav/personal-github/mondalsou",
+  "prompt": "Dark-themed portfolio for Sourav Mondal PhD, AI/ML Drug Discovery scientist — AIDesigner run 74ff3042",
+  "targetRouteHint": null,
+  "targetFileHint": null,
+  "detectedFrameworks": [],
+  "componentLibraries": [],
+  "stylingSystems": [],
+  "routeCandidates": [],
+  "tokenSources": [],
+  "componentDirectories": [],
+  "htmlStructure": {
+    "title": "Sourav Mondal, PhD — AI/ML Scientist | Drug Discovery",
+    "primaryHeading": "",
+    "sectionCount": 6,
+    "buttonCount": 1,
+    "formCount": 0,
+    "cardLikeCount": 1,
+    "hasNavigation": true,
+    "hasFooter": true,
+    "hasPricingSignals": false,
+    "hasDashboardSignals": false
+  },
+  "recommendations": [
+    "Break the artifact into section-level components before editing details.",
+    "Use the generated preview as the visual truth source while porting the layout."
+  ],
+  "warnings": [
+    "No frontend framework was detected. Validate the target surface manually before porting.",
+    "No obvious route targets were detected. Choose a target file deliberately before editing."
+  ]
+}

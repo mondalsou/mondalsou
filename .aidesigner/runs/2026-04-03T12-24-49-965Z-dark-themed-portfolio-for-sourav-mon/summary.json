@@ -1,0 +1,19 @@
+{
+  "id": "2026-04-03T12-24-49-965Z-dark-themed-portfolio-for-sourav-mon",
+  "createdAt": "2026-04-03T12:24:49.968Z",
+  "prompt": "Dark-themed portfolio for Sourav Mondal PhD, AI/ML Drug Discovery scientist — AIDesigner run 74ff3042",
+  "mode": null,
+  "url": null,
+  "viewport": "desktop",
+  "repoRoot": "/Users/sourav/personal-github/mondalsou",
+  "cwd": "/Users/sourav/personal-github/mondalsou",
+  "requestPath": "/Users/sourav/personal-github/mondalsou/.aidesigner/runs/2026-04-03T12-24-49-965Z-dark-themed-portfolio-for-sourav-mon/request.json",
+  "repoContextPath": "/Users/sourav/personal-github/mondalsou/.aidesigner/runs/2026-04-03T12-24-49-965Z-dark-themed-portfolio-for-sourav-mon/repo-context.json",
+  "designHtmlPath": "/Users/sourav/personal-github/mondalsou/.aidesigner/runs/2026-04-03T12-24-49-965Z-dark-themed-portfolio-for-sourav-mon/design.html",
+  "previewPath": null,
+  "previewError": "Preview rendering requires puppeteer. Install it in the repo or alongside @aidesigner/agent-skills.",
+  "parentRunId": null,
+  "usage": null,
+  "transport": "mcp",
+  "remoteRunId": "74ff3042-8664-4c68-adb8-3eae32314b60"
+}
