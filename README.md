@@ -42,6 +42,7 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 | [**Solubility Dual-Graph GNN**](https://github.com/mondalsou/solubility-dual-graph-gnn) | PyTorch · MPNN · Cross-Attention | R²=0.90 on 100K+ solute-solvent pairs (BigSolDB 2.0) |
 | [**Lead Optimization Agent**](https://github.com/mondalsou/lead-optimization-agent) | Claude AI · RDKit · Streamlit | AI agent loop for iterative structural optimization with property tracking |
 | [**GNN Bind Optimizer**](https://github.com/mondalsou/gnn-bind-optimizer) | PyTorch · PyG · REINFORCE · MLflow | Heterogeneous GNN for binding affinity + RL-based pocket-conditioned molecule generation |
+| [**Quantum Property Prediction**](https://github.com/mondalsou/quantum-property-prediction-nn) | Neural Networks · Materials Science | NN models for quantum properties of NV centers in diamond |
 
 ---
 
@@ -55,6 +56,10 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 ![Transformers](https://img.shields.io/badge/Transformers-f472b6?style=flat-square)
 ![AI Agents](https://img.shields.io/badge/AI_Agents-10b981?style=flat-square)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Reinforcement Learning](https://img.shields.io/badge/Reinforcement_Learning-7c3aed?style=flat-square)
+![Transfer Learning](https://img.shields.io/badge/Transfer_Learning-00d4ff?style=flat-square)
+![Multi-task Learning](https://img.shields.io/badge/Multi--task_Learning-f472b6?style=flat-square)
+![LSTM](https://img.shields.io/badge/LSTM-10b981?style=flat-square)
 
 ### Computational Chemistry
 ![CP2K](https://img.shields.io/badge/CP2K-00d4ff?style=flat-square)
@@ -70,6 +75,9 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 ![SMILES](https://img.shields.io/badge/SMILES%2FSMARTS-f472b6?style=flat-square)
 ![ADMET](https://img.shields.io/badge/ADMET-10b981?style=flat-square)
 ![Docking](https://img.shields.io/badge/Docking-00d4ff?style=flat-square)
+![CADD](https://img.shields.io/badge/CADD-7c3aed?style=flat-square)
+![Binding Affinity](https://img.shields.io/badge/Binding_Affinity-f472b6?style=flat-square)
+![Lead Optimization](https://img.shields.io/badge/Lead_Optimization-10b981?style=flat-square)
 
 ### Programming & Tools
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -78,6 +86,9 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
 
 ---
 
