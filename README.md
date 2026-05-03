@@ -129,7 +129,7 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 **📍 Hyderabad, India** | **📧 souravchembwn@gmail.com** | **📱 +91 9740851654**
 
 [![Portfolio](https://img.shields.io/badge/View_Portfolio-00d4ff?style=for-the-badge)](https://mondalsou.github.io/mondalsou/)
-[![CV](https://img.shields.io/badge/Download_CV-7c3aed?style=for-the-badge)](https://mondalsou.github.io/mondalsou/cv.html)
+[![CV](https://img.shields.io/badge/Download_CV-7c3aed?style=for-the-badge)](https://mondalsou.github.io/mondalsou/Sourav_Mondal_CV.pdf)
 
 </div>
 
