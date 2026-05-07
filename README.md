@@ -42,6 +42,7 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 | [**Solubility Dual-Graph GNN**](https://github.com/mondalsou/solubility-dual-graph-gnn) | PyTorch · MPNN · Cross-Attention | R²=0.90 on 100K+ solute-solvent pairs (BigSolDB 2.0) |
 | [**Lead Optimization Agent**](https://github.com/mondalsou/lead-optimization-agent) | Claude AI · RDKit · Streamlit | AI agent loop for iterative structural optimization with property tracking |
 | [**GNN Bind Optimizer**](https://github.com/mondalsou/gnn-bind-optimizer) | PyTorch · PyG · REINFORCE · MLflow | Heterogeneous GNN for binding affinity + RL-based pocket-conditioned molecule generation |
+| [**Formulation Bayesian Optimization**](https://github.com/mondalsou/formulation-bayesian-optimization) | BoTorch · GPyTorch · RDKit · Streamlit | Bayesian optimization pipeline for pharmaceutical formulation design — multi-objective GP surrogate with acquisition function tuning |
 
 ---
 
