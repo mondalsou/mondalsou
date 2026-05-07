@@ -112,9 +112,10 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-mono text-zinc-400">
                 <a href="#about" class="hover:text-cyanAccent transition-colors">01. About</a>
                 <a href="#projects" class="hover:text-cyanAccent transition-colors">02. Projects</a>
-                <a href="#publications" class="hover:text-cyanAccent transition-colors">03. Publications</a>
-                <a href="#experience" class="hover:text-cyanAccent transition-colors">04. Experience</a>
-                <a href="#skills" class="hover:text-cyanAccent transition-colors">05. Skills</a>
+                <a href="#news" class="hover:text-cyanAccent transition-colors">03. News</a>
+                <a href="#publications" class="hover:text-cyanAccent transition-colors">04. Publications</a>
+                <a href="#experience" class="hover:text-cyanAccent transition-colors">05. Experience</a>
+                <a href="#skills" class="hover:text-cyanAccent transition-colors">06. Skills</a>
                 <a href="Sourav_Mondal_CV.pdf" download class="px-4 py-2 bg-white/5 border border-purpleAccent/40 rounded hover:bg-purpleAccent/10 hover:border-purpleAccent transition-all text-zinc-200">CV →</a>
                 <a href="#contact" class="px-4 py-2 bg-white/5 border border-white/10 rounded hover:bg-white/10 hover:border-cyanAccent/50 transition-all text-zinc-200">Connect →</a>
             </div>
@@ -127,9 +128,10 @@
         <div id="mobile-menu" class="flex-col gap-4 px-6 pb-6 font-mono text-sm text-zinc-400 border-t border-white/5 bg-[#050508]">
             <a href="#about" class="hover:text-cyanAccent transition-colors py-1">01. About</a>
             <a href="#projects" class="hover:text-cyanAccent transition-colors py-1">02. Projects</a>
-            <a href="#publications" class="hover:text-cyanAccent transition-colors py-1">03. Publications</a>
-            <a href="#experience" class="hover:text-cyanAccent transition-colors py-1">04. Experience</a>
-            <a href="#skills" class="hover:text-cyanAccent transition-colors py-1">05. Skills</a>
+            <a href="#news" class="hover:text-cyanAccent transition-colors py-1">03. News</a>
+            <a href="#publications" class="hover:text-cyanAccent transition-colors py-1">04. Publications</a>
+            <a href="#experience" class="hover:text-cyanAccent transition-colors py-1">05. Experience</a>
+            <a href="#skills" class="hover:text-cyanAccent transition-colors py-1">06. Skills</a>
             <a href="Sourav_Mondal_CV.pdf" class="hover:text-purpleAccent transition-colors py-1">CV →</a>
             <a href="#contact" class="hover:text-cyanAccent transition-colors py-1">Connect →</a>
         </div>
@@ -598,7 +600,7 @@
                             <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-emerald-500 uppercase tracking-widest">Bayesian Opt · GP</span>
                             <div>
                                 <i class="ph ph-chart-line-up text-5xl text-emerald-400 mb-3 block drop-shadow-[0_0_8px_rgba(16,185,129,0.9)]"></i>
-                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Formulation Design · BoTorch</p>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Tablet Formulation · BoTorch</p>
                             </div>
                         </div>
                     </div>
@@ -607,17 +609,17 @@
                         <div>
                             <h3 class="text-xl font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors leading-tight mb-3">Formulation Bayesian Optimization</h3>
                             <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
-                                Multi-objective Bayesian optimization pipeline for pharmaceutical formulation design. Gaussian Process surrogate models guide sample-efficient exploration of excipient space, balancing solubility, stability, and bioavailability objectives.
+                                Model-based DoE pipeline replacing OFAT/grid screening with uncertainty-aware sequential experimentation for pharmaceutical tablet formulation. GP surrogate models maximize <strong class="text-white">Q45</strong> (% drug dissolved at 45 min) under hard mass-balance constraints across a 5-excipient design space (HPMC, MCC, CCS, MgSt, PVP K30).
                             </p>
                             <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> GP surrogate with tunable acquisition functions (EI, UCB, qNEHVI)</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> Multi-objective Pareto front optimization for formulation trade-offs</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> Interactive Streamlit dashboard for experiment design &amp; visualization</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> Single-objective BO: GP + EI/LogEI to maximize Q45 with fewer wet-lab runs</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> Multi-objective BO: qNEHVI Pareto front over Q45, hardness &amp; friability</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-emerald-400"></i> Streamlit dashboard: design-space exploration, experiment logging &amp; convergence comparison</li>
                             </ul>
                         </div>
                         <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
                             <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">BoTorch · GPyTorch</span>
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Gaussian Process</span>
                             <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Streamlit</span>
                             <a href="https://github.com/mondalsou/formulation-bayesian-optimization" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
                                 <i class="ph ph-github-logo"></i> GitHub
@@ -625,6 +627,78 @@
                         </div>
                     </div>
                 </article>
+
+            </div>
+        </section>
+
+        <!-- RECENT NEWS -->
+        <section id="news" class="lab-border pb-24 scroll-mt-24">
+            <div class="mb-12 flex items-center gap-4">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Recent News</h2>
+                <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
+            </div>
+
+            <div class="flex flex-col gap-0 border-l-2 border-white/5 ml-3">
+
+                <!-- News Item 1 -->
+                <div class="relative flex gap-6 pb-10 pl-8 group">
+                    <div class="absolute left-[-9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#050508] group-hover:scale-125 transition-transform shadow-[0_0_10px_rgba(16,185,129,0.6)]"></div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-1">
+                            <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-widest">May 2026</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 uppercase tracking-wide">New Project</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-zinc-100 mb-1">Launched: Formulation Bayesian Optimization</h4>
+                        <p class="text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                            Released model-based DoE pipeline for pharmaceutical tablet formulation. GP surrogate + EI/qNEHVI acquisition maximizes dissolution (Q45) and multi-objective trade-offs under hard excipient constraints — replacing costly OFAT screening.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="relative flex gap-6 pb-10 pl-8 group">
+                    <div class="absolute left-[-9px] top-1.5 w-4 h-4 rounded-full bg-cyanAccent border-2 border-[#050508] group-hover:scale-125 transition-transform shadow-[0_0_10px_rgba(0,240,255,0.5)]"></div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-1">
+                            <span class="font-mono text-[10px] text-cyanAccent uppercase tracking-widest">2025</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-cyanAccent/10 border border-cyanAccent/20 text-cyanAccent uppercase tracking-wide">Publication</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-zinc-100 mb-1">Paper published in ACS Central Science</h4>
+                        <p class="text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                            "The spin phonon relaxation of single molecules magnet in the presence of strong exchange coupling" — first-principles study linking phonon coupling to spin relaxation rates in molecular magnets.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="relative flex gap-6 pb-10 pl-8 group">
+                    <div class="absolute left-[-9px] top-1.5 w-4 h-4 rounded-full bg-purpleAccent border-2 border-[#050508] group-hover:scale-125 transition-transform shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-1">
+                            <span class="font-mono text-[10px] text-purpleAccent uppercase tracking-widest">Jan 2024</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-purpleAccent/10 border border-purpleAccent/20 text-purpleAccent uppercase tracking-wide">Role</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-zinc-100 mb-1">Joined Aganitha Cognitive Solutions as Scientist</h4>
+                        <p class="text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                            Building production AI/ML pipelines for pharmaceutical R&amp;D — crystal structure prediction, conformer generation, pKa estimation, and ADMET profiling within Aganitha's commercial Igniva™ platform.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="relative flex gap-6 pl-8 group">
+                    <div class="absolute left-[-9px] top-1.5 w-4 h-4 rounded-full bg-zinc-600 border-2 border-[#050508] group-hover:scale-125 transition-transform"></div>
+                    <div class="flex-1">
+                        <div class="flex flex-wrap items-center gap-3 mb-1">
+                            <span class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest">2023</span>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-white/5 border border-white/10 text-zinc-500 uppercase tracking-wide">Publication</span>
+                        </div>
+                        <h4 class="text-base font-semibold text-zinc-100 mb-1">Paper published in npj Computational Materials</h4>
+                        <p class="text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+                            "Spin-phonon decoherence in solid-state paramagnetic defects from first principles" — ab-initio framework for computing spin coherence times in qubit-relevant defect systems.
+                        </p>
+                    </div>
+                </div>
 
             </div>
         </section>
