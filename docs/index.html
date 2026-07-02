@@ -299,7 +299,8 @@
                         <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>PyTorch / TensorFlow</li>
                         <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Transformers</li>
                         <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>ADMET Prediction</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>AI Agents</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>AI Agents / LangChain</li>
+                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Bayesian Optimization</li>
                     </ul>
                 </div>
 
@@ -624,6 +625,45 @@
                             <a href="https://github.com/mondalsou/formulation-bayesian-optimization" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
                                 <i class="ph ph-github-logo"></i> GitHub
                             </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6: RegDocIQ -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(249,115,22,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                             alt="Regulatory documents"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-orange-500/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-orange-500 uppercase tracking-widest">RAG · PDF Q&amp;A</span>
+                            <div>
+                                <i class="ph ph-file-text text-5xl text-orange-400 mb-3 block drop-shadow-[0_0_8px_rgba(249,115,22,0.9)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">BM25 · LLM · Streamlit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-orange-400 transition-colors leading-tight mb-3">RegDocIQ — Regulatory Document Q&amp;A</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                Minimal RAG pipeline for pharmaceutical regulatory PDF question-answering. No vector database — BM25 keyword retrieval over overlapping page chunks, with LLM-generated cited answers via OpenRouter. Upload any regulatory document and query it instantly.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-orange-400"></i> BM25 retrieval — zero embedding cost, interpretable ranking</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-orange-400"></i> LLM answers cite source passages with [Source N] references</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-orange-400"></i> Streamlit UI + Jupyter notebook — local-first, no cloud dependency</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">BM25 · pypdf</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">OpenRouter LLM</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Streamlit</span>
+                            <span class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-500 bg-white/3 border border-white/8 italic">Private Repo</span>
                         </div>
                     </div>
                 </article>
