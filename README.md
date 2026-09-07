@@ -100,6 +100,7 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 
 | Year | Publication | Journal |
 |------|-------------|---------|
+| Preprint | SitepKa — Site-Specific pKa Prediction (dual-graph cross-attention GNN, 35 solvents) | [**ChemRxiv**](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002800/v2) |
 | 2025 | The spin phonon relaxation of single molecules magnet in the presence of strong exchange coupling | **ACS Cent. Sci.** |
 | 2023 | Spin-phonon decoherence in solid-state paramagnetic defects from first principles | **npj Comput. Mat.** |
 | 2022 | Unravelling the contributions to spin-lattice relaxation in Kramers single-molecule magnets | **J. Am. Chem. Soc.** |
