@@ -43,6 +43,7 @@ Computational scientist with **10+ years of experience** in cross-disciplinary r
 | [**Lead Optimization Agent**](https://github.com/mondalsou/lead-optimization-agent) | LangChain · RDKit · Streamlit | AI agent loop for iterative structural optimization with property tracking |
 | [**GNN Bind Optimizer**](https://github.com/mondalsou/gnn-bind-optimizer) | PyTorch · PyG · REINFORCE · MLflow | Heterogeneous GNN for binding affinity + RL-based pocket-conditioned molecule generation |
 | [**Formulation Bayesian Optimization**](https://github.com/mondalsou/formulation-bayesian-optimization) | BoTorch · GPyTorch · RDKit · Streamlit | Bayesian optimization pipeline for pharmaceutical formulation design — multi-objective GP surrogate with acquisition function tuning |
+| [**ChemKeyRAG**](https://github.com/mondalsou/chemkey-rag) | RDKit · InChIKey · BM25 · Streamlit | Structure-keyed literature retrieval — chemical names resolved to InChIKey skeletons at ingest, so one molecule finds every synonym |
 
 ---
 
