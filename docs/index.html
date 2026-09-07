@@ -419,44 +419,43 @@
 
             <div class="flex flex-col gap-6">
 
-                <!-- Card 1: Drug Discovery Triage Platform -->
-                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(0,240,255,0.08)] transition-all duration-300 overflow-hidden">
+                <!-- Card 1: Lead Optimization Agent -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(255,128,181,0.08)] transition-all duration-300 overflow-hidden">
                     <!-- Left panel -->
                     <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
-                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
-                             alt="Drug Discovery Lab"
+                        <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=800&q=80"
+                             alt="Molecule structure visualization"
                              class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
-                        <div class="absolute inset-0 bg-cyanAccent/10"></div>
+                        <div class="absolute inset-0 bg-pinkAccent/10"></div>
                         <div class="relative z-10 h-full flex flex-col justify-between p-6">
-                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-cyanAccent uppercase tracking-widest">Featured</span>
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-pinkAccent uppercase tracking-widest">AI Agents</span>
                             <div>
-                                <i class="ph ph-microscope text-5xl text-cyanAccent mb-3 block drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]"></i>
-                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Full-Stack · Live Demo</p>
+                                <i class="ph ph-robot text-5xl text-pinkAccent mb-3 block drop-shadow-[0_0_8px_rgba(255,128,181,0.9)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Claude AI · HuggingFace</p>
                             </div>
                         </div>
                     </div>
                     <!-- Right content -->
                     <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-cyanAccent transition-colors leading-tight mb-3">Drug Discovery Triage Platform</h3>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-pinkAccent transition-colors leading-tight mb-3">Lead Optimization Agent</h3>
                             <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
-                                Full-stack drug discovery triage application with real-time ADMET property predictions, QED scoring, PAINS alerts, and interactive 2D molecular visualization for rapid compound screening.
+                                AI-powered medicinal chemistry sandbox using Claude to iteratively propose and score structural modifications. Autonomous loop: propose → score → compare → iterate with full property trajectory tracking.
                             </p>
                             <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Real-time ADMET: lipophilicity, solubility, permeability</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> QED drug-likeness scoring &amp; PAINS substructure alerts</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Dockerized deployment with CI/CD pipeline</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> BBB, CNS MPO, QED, and flexibility tracked per attempt</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Highlighted 2D structures showing structural changes</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Local run persistence — resume without extra LLM cost</li>
                             </ul>
                         </div>
                         <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">React + TypeScript</span>
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">FastAPI</span>
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit</span>
-                            <a href="https://github.com/mondalsou/drug-discovery-triage" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Claude AI</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit · Streamlit</span>
+                            <a href="https://github.com/mondalsou/lead-optimization-agent" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
                                 <i class="ph ph-github-logo"></i> GitHub
                             </a>
-                            <a href="https://drug-discovery-triage.vercel.app" target="_blank" class="px-3 py-1 text-[11px] font-mono text-cyanAccent bg-cyanAccent/10 border border-cyanAccent/20 hover:bg-cyanAccent/20 transition-colors flex items-center gap-1">
+                            <a href="https://huggingface.co/spaces/mondalsou/lead_optimization_agent" target="_blank" class="px-3 py-1 text-[11px] font-mono text-pinkAccent bg-pinkAccent/10 border border-pinkAccent/20 hover:bg-pinkAccent/20 transition-colors flex items-center gap-1">
                                 Live Demo <i class="ph ph-arrow-up-right"></i>
                             </a>
                         </div>
@@ -504,50 +503,7 @@
                     </div>
                 </article>
 
-                <!-- Card 3: Lead Optimization Agent -->
-                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(255,128,181,0.08)] transition-all duration-300 overflow-hidden">
-                    <!-- Left panel -->
-                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
-                        <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=800&q=80"
-                             alt="Molecule structure visualization"
-                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
-                        <div class="absolute inset-0 bg-pinkAccent/10"></div>
-                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
-                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-pinkAccent uppercase tracking-widest">AI Agents</span>
-                            <div>
-                                <i class="ph ph-robot text-5xl text-pinkAccent mb-3 block drop-shadow-[0_0_8px_rgba(255,128,181,0.9)]"></i>
-                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Claude AI · HuggingFace</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right content -->
-                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-pinkAccent transition-colors leading-tight mb-3">Lead Optimization Agent</h3>
-                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
-                                AI-powered medicinal chemistry sandbox using Claude to iteratively propose and score structural modifications. Autonomous loop: propose → score → compare → iterate with full property trajectory tracking.
-                            </p>
-                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> BBB, CNS MPO, QED, and flexibility tracked per attempt</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Highlighted 2D structures showing structural changes</li>
-                                <li class="flex items-center gap-2"><i class="ph ph-check text-pinkAccent"></i> Local run persistence — resume without extra LLM cost</li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Claude AI</span>
-                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit · Streamlit</span>
-                            <a href="https://github.com/mondalsou/lead-optimization-agent" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
-                                <i class="ph ph-github-logo"></i> GitHub
-                            </a>
-                            <a href="https://huggingface.co/spaces/mondalsou/lead_optimization_agent" target="_blank" class="px-3 py-1 text-[11px] font-mono text-pinkAccent bg-pinkAccent/10 border border-pinkAccent/20 hover:bg-pinkAccent/20 transition-colors flex items-center gap-1">
-                                Live Demo <i class="ph ph-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4: GNN Bind Optimizer -->
+                <!-- Card 3: GNN Bind Optimizer -->
                 <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(245,158,11,0.08)] transition-all duration-300 overflow-hidden">
                     <!-- Left panel -->
                     <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
@@ -588,7 +544,7 @@
                     </div>
                 </article>
 
-                <!-- Card 5: Formulation Bayesian Optimization -->
+                <!-- Card 4: Formulation Bayesian Optimization -->
                 <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(16,185,129,0.08)] transition-all duration-300 overflow-hidden">
                     <!-- Left panel -->
                     <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
@@ -629,7 +585,7 @@
                     </div>
                 </article>
 
-                <!-- Card 6: ChemKeyRAG -->
+                <!-- Card 5: ChemKeyRAG -->
                 <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(249,115,22,0.08)] transition-all duration-300 overflow-hidden">
                     <!-- Left panel -->
                     <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
@@ -665,6 +621,50 @@
                             <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">Streamlit</span>
                             <a href="https://github.com/mondalsou/chemkey-rag" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
                                 <i class="ph ph-github-logo"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6: Drug Discovery Triage Platform -->
+                <article class="group border border-white/10 bg-[#08080c] flex flex-col md:flex-row shadow-lg hover:shadow-[0_4px_30px_rgba(0,240,255,0.08)] transition-all duration-300 overflow-hidden">
+                    <!-- Left panel -->
+                    <div class="w-full md:w-2/5 relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[240px]">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                             alt="Drug Discovery Lab"
+                             class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-cyanAccent/10"></div>
+                        <div class="relative z-10 h-full flex flex-col justify-between p-6">
+                            <span class="self-start px-2 py-1 bg-[#050508] text-white text-[10px] font-mono border border-cyanAccent uppercase tracking-widest">Featured</span>
+                            <div>
+                                <i class="ph ph-microscope text-5xl text-cyanAccent mb-3 block drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]"></i>
+                                <p class="font-mono text-xs text-white/80 uppercase tracking-widest">Full-Stack · Live Demo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right content -->
+                    <div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-zinc-100 group-hover:text-cyanAccent transition-colors leading-tight mb-3">Drug Discovery Triage Platform</h3>
+                            <p class="text-zinc-400 font-light leading-relaxed mb-4 text-sm">
+                                Full-stack drug discovery triage application with real-time ADMET property predictions, QED scoring, PAINS alerts, and interactive 2D molecular visualization for rapid compound screening.
+                            </p>
+                            <ul class="text-xs text-zinc-500 space-y-1.5 mb-6">
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Real-time ADMET: lipophilicity, solubility, permeability</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> QED drug-likeness scoring &amp; PAINS substructure alerts</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check text-cyanAccent"></i> Dockerized deployment with CI/CD pipeline</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">React + TypeScript</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">FastAPI</span>
+                            <span class="px-2 py-1 text-[11px] font-mono text-zinc-300 bg-white/5 border border-white/10">RDKit</span>
+                            <a href="https://github.com/mondalsou/drug-discovery-triage" target="_blank" class="ml-auto px-3 py-1 text-[11px] font-mono text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/30 transition-colors flex items-center gap-1">
+                                <i class="ph ph-github-logo"></i> GitHub
+                            </a>
+                            <a href="https://drug-discovery-triage.vercel.app" target="_blank" class="px-3 py-1 text-[11px] font-mono text-cyanAccent bg-cyanAccent/10 border border-cyanAccent/20 hover:bg-cyanAccent/20 transition-colors flex items-center gap-1">
+                                Live Demo <i class="ph ph-arrow-up-right"></i>
                             </a>
                         </div>
                     </div>
