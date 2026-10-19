@@ -93,6 +93,8 @@
         #mobile-menu { display: none; }
         #mobile-menu.open { display: flex; }
     </style>
+    <link rel="stylesheet" href="visual-enhancements.css">
+    <script type="module" src="visual-enhancements.js"></script>
 </head>
 <body class="relative min-h-screen overflow-x-hidden font-sans">
 
@@ -277,84 +279,14 @@
 
         <!-- SKILLS -->
         <section id="skills" class="lab-border pb-24 scroll-mt-24 relative">
-            <div class="absolute right-0 top-0 opacity-[0.03] pointer-events-none">
-                <i class="ph ph-graph text-[20rem]"></i>
-            </div>
             <div class="mb-12 flex items-center gap-4">
                 <h2 class="text-2xl font-bold text-white tracking-tight">Computational Stack</h2>
                 <div class="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                <!-- Pod 1: AI/ML -->
-                <div class="group border border-white/8 border-t-2 border-t-cyanAccent bg-surfaceElevated p-6 hover:border-cyanAccent/40 hover:bg-[#0f1a1f] transition-all relative overflow-hidden">
-                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-cyanAccent/15 flex items-center justify-center group-hover:bg-cyanAccent/25 transition-colors">
-                        <i class="ph ph-brain text-2xl text-cyanAccent"></i>
-                    </div>
-                    <div class="font-mono text-xs text-cyanAccent mb-5 flex items-center gap-2 pr-12">
-                        <i class="ph ph-caret-right"></i> AI/ML for Drug Discovery
-                    </div>
-                    <ul class="space-y-2.5">
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Graph Neural Networks</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>PyTorch / TensorFlow</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Transformers</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>ADMET Prediction</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>AI Agents / LangChain</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-cyanAccent/60 flex-shrink-0"></span>Bayesian Optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Pod 2: Comp. Chem -->
-                <div class="group border border-white/8 border-t-2 border-t-purpleAccent bg-surfaceElevated p-6 hover:border-purpleAccent/40 hover:bg-[#130f1f] transition-all relative overflow-hidden">
-                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-purpleAccent/15 flex items-center justify-center group-hover:bg-purpleAccent/25 transition-colors">
-                        <i class="ph ph-flask text-2xl text-purpleAccent"></i>
-                    </div>
-                    <div class="font-mono text-xs text-purpleAccent mb-5 flex items-center gap-2 pr-12">
-                        <i class="ph ph-caret-right"></i> Computational Chemistry
-                    </div>
-                    <ul class="space-y-2.5">
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>CP2K / ORCA / PySCF</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>DFT / SAPT</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>ML Force Fields</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>Molecular Docking</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-purpleAccent/60 flex-shrink-0"></span>pKa Prediction</li>
-                    </ul>
-                </div>
-
-                <!-- Pod 3: Cheminformatics -->
-                <div class="group border border-white/8 border-t-2 border-t-pinkAccent bg-surfaceElevated p-6 hover:border-pinkAccent/40 hover:bg-[#1a0f17] transition-all relative overflow-hidden">
-                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-pinkAccent/15 flex items-center justify-center group-hover:bg-pinkAccent/25 transition-colors">
-                        <i class="ph ph-dna text-2xl text-pinkAccent"></i>
-                    </div>
-                    <div class="font-mono text-xs text-pinkAccent mb-5 flex items-center gap-2 pr-12">
-                        <i class="ph ph-caret-right"></i> Cheminformatics
-                    </div>
-                    <ul class="space-y-2.5">
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>RDKit / ASE</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>SMILES / SMARTS</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>Conformer Generation</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>Crystal Structure Pred.</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-pinkAccent/60 flex-shrink-0"></span>ADMET Workflows</li>
-                    </ul>
-                </div>
-
-                <!-- Pod 4: MLOps & Languages -->
-                <div class="group border border-white/8 border-t-2 border-t-zinc-400 bg-surfaceElevated p-6 hover:border-zinc-400/40 hover:bg-[#141418] transition-all relative overflow-hidden">
-                    <div class="absolute top-3 right-3 w-10 h-10 rounded-lg bg-zinc-400/15 flex items-center justify-center group-hover:bg-zinc-400/25 transition-colors">
-                        <i class="ph ph-hard-drives text-2xl text-zinc-300"></i>
-                    </div>
-                    <div class="font-mono text-xs text-zinc-300 mb-5 flex items-center gap-2 pr-12">
-                        <i class="ph ph-caret-right"></i> MLOps &amp; Languages
-                    </div>
-                    <ul class="space-y-2.5">
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Python (Expert)</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Docker / Azure</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>CI/CD / MLflow</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>NumPy / Pandas</li>
-                        <li class="flex items-center gap-2 text-sm text-zinc-200"><span class="w-1 h-1 rounded-full bg-zinc-400/60 flex-shrink-0"></span>Fortran / Bash</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="stack-grid"><article class="stack-card stack-cyan"><div class="stack-card-heading"><div class="stack-icon" aria-hidden="true"><i class="ph ph-brain"></i></div><h3>AI/ML for Drug Discovery</h3><span class="stack-index" aria-hidden="true">01</span></div><ul class="stack-tags"><li>Graph Neural Networks</li><li>PyTorch / TensorFlow</li><li>Transformers</li><li>ADMET Prediction</li><li>AI Agents / LangChain</li><li>Bayesian Optimization</li></ul></article>
+<article class="stack-card stack-purple"><div class="stack-card-heading"><div class="stack-icon" aria-hidden="true"><i class="ph ph-flask"></i></div><h3>Computational Chemistry</h3><span class="stack-index" aria-hidden="true">02</span></div><ul class="stack-tags"><li>CP2K / ORCA / PySCF</li><li>DFT / SAPT</li><li>ML Force Fields</li><li>Molecular Docking</li><li>pKa Prediction</li></ul></article>
+<article class="stack-card stack-pink"><div class="stack-card-heading"><div class="stack-icon" aria-hidden="true"><i class="ph ph-dna"></i></div><h3>Cheminformatics</h3><span class="stack-index" aria-hidden="true">03</span></div><ul class="stack-tags"><li>RDKit / ASE</li><li>SMILES / SMARTS</li><li>Conformer Generation</li><li>Crystal Structure Pred.</li><li>ADMET Workflows</li></ul></article>
+<article class="stack-card stack-silver"><div class="stack-card-heading"><div class="stack-icon" aria-hidden="true"><i class="ph ph-hard-drives"></i></div><h3>MLOps &amp; Languages</h3><span class="stack-index" aria-hidden="true">04</span></div><ul class="stack-tags"><li>Python</li><li>Docker / Azure</li><li>CI/CD / MLflow</li><li>NumPy / Pandas</li><li>Fortran / Bash</li></ul></article></div>
         </section>
 
         <!-- PROJECTS -->
@@ -385,13 +317,14 @@
                     </div>
                 </div>
                 <!-- 4-item work grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+                <div class="capability-grid grid grid-cols-1 sm:grid-cols-2 gap-0">
                     <div class="p-5 hover:bg-white/3 transition-colors group/item">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="ph ph-crystal-ball text-lg text-cyanAccent"></i>
                             <h4 class="text-sm font-semibold text-white">Crystal Structure Prediction</h4>
                         </div>
                         <p class="text-xs text-zinc-400 leading-relaxed">GNN pipeline for rapid polymorph screening of drug-like molecules — predicting stable crystal forms critical to formulation.</p>
+<div class="science-visual process-visual" data-scene="crystal"><div class="scene-toolbar"><span class="scene-stage">Loading molecular view</span><button class="visual-pause" aria-label="Pause crystal animation" aria-pressed="false">Ⅱ</button></div><canvas aria-label="Interactive three-dimensional crystal illustration" role="img"></canvas><div class="scene-readout"></div><div class="scene-footer"><span>Illustrative molecular scene</span><button class="scene-replay" aria-label="Replay crystal animation">↺</button></div></div>
                     </div>
                     <div class="p-5 hover:bg-white/3 transition-colors group/item border-t sm:border-t-0 border-white/5">
                         <div class="flex items-center gap-2 mb-2">
@@ -399,6 +332,7 @@
                             <h4 class="text-sm font-semibold text-white">Conformer Generation</h4>
                         </div>
                         <p class="text-xs text-zinc-400 leading-relaxed">Environment-aware AI platform generating realistic 3D conformers accounting for solvent and protein-pocket context.</p>
+<div class="science-visual process-visual" data-scene="conformer"><div class="scene-toolbar"><span class="scene-stage">Loading molecular view</span><button class="visual-pause" aria-label="Pause conformer animation" aria-pressed="false">Ⅱ</button></div><canvas aria-label="Interactive three-dimensional conformer illustration" role="img"></canvas><div class="scene-readout"></div><div class="scene-footer"><span>Illustrative molecular scene</span><button class="scene-replay" aria-label="Replay conformer animation">↺</button></div></div>
                     </div>
                     <div class="p-5 hover:bg-white/3 transition-colors group/item border-t lg:border-t-0 border-white/5">
                         <div class="flex items-center gap-2 mb-2">
@@ -406,6 +340,7 @@
                             <h4 class="text-sm font-semibold text-white">pKa Estimation</h4>
                         </div>
                         <p class="text-xs text-zinc-400 leading-relaxed">Dual-model approach — QM-based and GNN-based — for accurate pKa prediction under non-aqueous conditions.</p>
+<div class="science-visual process-visual" data-scene="pka"><div class="scene-toolbar"><span class="scene-stage">Loading molecular view</span><button class="visual-pause" aria-label="Pause pka animation" aria-pressed="false">Ⅱ</button></div><canvas aria-label="Interactive three-dimensional pka illustration" role="img"></canvas><div class="scene-readout"></div><div class="scene-footer"><span>Illustrative molecular scene</span><button class="scene-replay" aria-label="Replay pka animation">↺</button></div></div>
                     </div>
                     <div class="p-5 hover:bg-white/3 transition-colors group/item border-t lg:border-t-0 border-white/5">
                         <div class="flex items-center gap-2 mb-2">
@@ -413,6 +348,7 @@
                             <h4 class="text-sm font-semibold text-white">ADMET Prediction</h4>
                         </div>
                         <p class="text-xs text-zinc-400 leading-relaxed">Physics-based QM platform predicting solubility, logP, and solvation energy for high-accuracy ADMET profiling.</p>
+<div class="science-visual process-visual" data-scene="property"><div class="scene-toolbar"><span class="scene-stage">Loading molecular view</span><button class="visual-pause" aria-label="Pause property animation" aria-pressed="false">Ⅱ</button></div><canvas aria-label="Interactive three-dimensional property illustration" role="img"></canvas><div class="scene-readout"></div><div class="scene-footer"><span>Illustrative molecular scene</span><button class="scene-replay" aria-label="Replay property animation">↺</button></div></div>
                     </div>
                 </div>
             </div>
