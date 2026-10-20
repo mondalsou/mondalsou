@@ -1,0 +1,12 @@
+# Revised science photo strip
+
+Built-in image generation. Conceptual illustrations, not measured structures or a portrait of Sourav. Crystal image unchanged.
+
+## protein-pocket-v2
+
+Use case: scientific-educational. Landscape 3:2 original editorial molecular visualization for a computational drug discovery portfolio. Close-up CUTAWAY of a protein's solvent-accessible molecular surface, a deeply recessed binding pocket, with ONE small organic drug-like ligand nestled INSIDE the cavity, visibly surrounded by protein on three sides. Make the ligand clearly readable in the central opening: realistic ball-and-stick, grey carbon, red oxygen, blue nitrogen, white hydrogen; plausible covalent geometry. Protein surface softly sculpted granular pale slate-blue, subtle ribbon structure at the outer edges, cutaway opening toward camera so the ligand is not occluded. Few faint dashed interaction lines to pocket residues, no labels. Sophisticated scientifically inspired editorial 3D illustration, dark slate background, soft ivory rim lighting and restrained warm amber highlights on ligand. Large central subject, readable in a small landscape website photo. No free-floating molecule outside protein, no DNA helix, no people, no computer, no words, no logo, no frame, no tape. Conceptual illustration, not experimental data.
+
+## scientist-computer-v2
+
+Use case: photorealistic-natural. Original landscape 3:2 editorial photograph-like illustration for a computational chemistry scientist portfolio. A scientist working attentively at a desktop computer in a research office, side and over-shoulder three-quarter view, hand using mouse, other hand naturally at keyboard. The monitor clearly displays a restrained realistic molecular modeling view: pale blue protein ribbon and surface binding pocket with a small ligand inside on dark background, a second small molecular view alongside, no legible text. Scientist in simple collared shirt, adult with short dark hair and glasses, fictional non-identifiable person, natural thoughtful posture. Modern uncluttered research workstation, understated notebook beside keyboard. Cool slate-blue shadows, warm soft window light, photographic realism and fine texture. Scientist and monitor both visible within center landscape composition, readable at thumbnail size. No floating holograms, no robot, no brain icon, no glowing neon, no slogans, no logos, no border or tape. This is a conceptual stock-style illustration, not a portrait of the website owner.
+

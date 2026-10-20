@@ -124,7 +124,7 @@ function createView(host){
    const isLogP=mode==='logp';vessel.visible=isLogP;membrane.visible=!isLogP;labels.hidden=!isLogP;
    if(isLogP){
     stage.textContent='Partitioning';footer.textContent='Neutral solute · qualitative illustration';
-    readout.innerHTML='<div class="logp-equation">logP = log₁₀(c<sub>octanol</sub> / c<sub>water</sub>)</div>';
+    readout.textContent='';
     const p=t%18,k=ease((p-2)/5)*(1-ease((p-11)/5));
     exchange.g.position.set(1.1,-1.6+3.2*k,1.5);exchange.g.rotation.set(.15,.35+Math.sin(t*.35)*.25,.2);
     residents.forEach(({g,p,i})=>g.position.copy(p).add(V(Math.sin(t*.4+i)*.07,Math.cos(t*.3+i)*.06,0)));

@@ -1,0 +1,70 @@
+/* Personal presentation, retaining the original dark palette and scientific scenes. */
+/* Less interface chrome; typography carries the introduction. */
+nav .font-mono, #mobile-menu { font-family:Inter,sans-serif; }
+nav .ph-atom { display:none; }
+nav.glass-panel { background:rgba(5,5,8,.88); }
+body > .bg-grid-pattern { opacity:.13; }
+body > .animate-blob { opacity:.12; }
+main > section:first-child h1 { font-family:Georgia,'Times New Roman',serif; font-weight:400; letter-spacing:-.055em; text-shadow:none; }
+main > section:first-child h1 span { background:none; color:#f4f4f5; }
+main > section:first-child h1 + p { color:#c0c0cb; font-size:clamp(1.1rem,2vw,1.5rem); line-height:1.55; }
+main > section:first-child p.border-l-2 { border:0; padding-left:0; font-size:16px; line-height:1.85; }
+main > section:first-child a { border-radius:5px; box-shadow:none; }
+main > section:first-child a[href="#projects"] { border-color:#00f0ff50; background:#00f0ff0a; }
+main > section:first-child a:not([href="#projects"]) { background:transparent; border-color:transparent; }
+main > section:first-child a:not([href="#projects"]):hover { border-color:#ffffff25; }
+main > section:first-child a .ph { display:none; }
+/* Frame the portrait simply; molecular animations remain untouched. */
+main > section:first-child > div:last-child > div:not(:has(img)) { visibility:hidden; }
+main > section:first-child > div:last-child > div:has(img) { border:1px solid #ffffff12; box-shadow:0 20px 60px #0005; }
+#about .uppercase, #contact .uppercase { text-transform:none; letter-spacing:0; font-family:Inter,sans-serif; }
+#about .tracking-\[0\.2em\] { color:#a1a1aa; }
+.contact-invitation { font-family:Georgia,'Times New Roman',serif; color:#f4f4f5; font-size:clamp(1.8rem,4vw,3rem); letter-spacing:-.03em; }
+.contact-availability { color:#a1a1aa; font-size:14px; margin-top:-12px; }
+#contact h2 { font-size:clamp(1.3rem,3.5vw,2.6rem); font-weight:400; letter-spacing:-.025em; }
+#contact .font-mono { font-family:Inter,sans-serif; }
+#contact a.w-10 { border-radius:50%; }
+
+/* News and career share a continuous path, using the existing text and order. */
+#news > div:last-child { position:relative; border:0; margin-left:0; padding-left:38px; }
+#news > div:last-child::before { content:''; position:absolute; left:8px; top:24px; bottom:28px; width:1px; background:linear-gradient(#00f0ff80,#8a2be255,#ffffff18); }
+#news > div:last-child > .group { display:block; padding:0 0 24px; }
+#news > div:last-child > .group:last-child { padding-bottom:0; }
+#news .group > .absolute { left:-35px; top:25px; width:11px; height:11px; background:#0a0a0f; border:2px solid #788b9e; box-shadow:0 0 0 5px #050508; }
+#news .group:first-child > .absolute { border-color:#00f0ff; }
+#news .group > .flex-1 { padding:24px 28px; background:linear-gradient(110deg,#11131b,#0a0a0f); border:1px solid #ffffff0c; border-radius:12px; transition:border-color .2s; }
+#news .group:hover > .flex-1 { border-color:#ffffff25; }
+#news .group > .flex-1 > div { margin-bottom:12px; gap:12px; }
+#news .group span { font-family:Inter,sans-serif; text-transform:none; letter-spacing:0; font-size:12px; color:#a1a1aa; }
+#news .group span:first-child { color:#c3ceda; }
+#news .group span:nth-child(2) { border:0; border-left:1px solid #ffffff25; border-radius:0; background:none; padding:0 0 0 12px; }
+#news h4 { font-size:18px; font-weight:500; letter-spacing:-.02em; margin-bottom:8px; }
+#news .group p { max-width:850px; line-height:1.8; }
+#experience > div:last-child { position:relative; border:0; gap:0; }
+#experience > div:last-child::before { content:''; position:absolute; left:218px; top:30px; bottom:50px; width:1px; background:linear-gradient(#00f0ff80,#8a2be255,#ffffff18); }
+#experience > div:last-child > .group { position:relative; display:grid; grid-template-columns:190px 1fr; gap:58px; border:0; padding:0 0 28px; background:none; }
+#experience > div:last-child > .group::before { content:''; position:absolute; left:213px; top:29px; width:11px; height:11px; border-radius:50%; border:2px solid #788b9e; background:#0a0a0f; box-shadow:0 0 0 5px #050508; }
+#experience > div:last-child > .group:first-child::before { border-color:#00f0ff; }
+#experience .group > div:first-child { width:auto; padding:24px 0; border:0; }
+#experience .group > div:first-child p { font-family:Inter,sans-serif; text-transform:none; letter-spacing:0; font-size:13px; line-height:1.6; }
+#experience .group > div:first-child p:first-child { color:#d4d4d8; margin-bottom:8px; }
+#experience .group > div:first-child p:last-child { color:#9298a6; }
+#experience .group > div:last-child { min-width:0; border:1px solid #ffffff0c; background:linear-gradient(110deg,#11131b,#0a0a0f); border-radius:12px; padding:24px 28px; transition:border-color .2s; }
+#experience .group:hover > div:last-child { border-color:#ffffff25; }
+#experience h3 { font-weight:500; font-size:20px; letter-spacing:-.02em; }
+#experience h3 + p { font-family:Inter,sans-serif; color:#a8b8cc; margin:8px 0 18px; }
+#experience li { line-height:1.8; }
+#experience li i { color:#646c7b; }
+@media(max-width:767px) {
+ #news > div:last-child { padding-left:26px; }
+ #news > div:last-child::before { left:4px; }
+ #news .group > .absolute { left:-27px; }
+ #news .group > .flex-1 { padding:20px; }
+ #experience > div:last-child { padding-left:26px; }
+ #experience > div:last-child::before { left:4px; top:9px; bottom:60px; }
+ #experience > div:last-child > .group { display:block; padding-bottom:28px; }
+ #experience > div:last-child > .group::before { left:-27px; top:6px; }
+ #experience .group > div:first-child { padding:0 0 14px; }
+ #experience .group > div:first-child p:first-child { margin-bottom:2px; }
+ #experience .group > div:last-child { padding:20px; }
+}

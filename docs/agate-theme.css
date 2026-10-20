@@ -1,0 +1,117 @@
+/* Agate Run visual adaptation. Existing copy, images and molecular scenes retained. */
+html { background:#182129!important; color:#d4d3cd!important; }
+nav.glass-panel { background:#182129ed; border-color:#eee5d51c; }
+body > .bg-grid-pattern { opacity:.2; }
+body > .animate-blob { opacity:.05; }
+main > section:first-child h1 { font-family:'Vollkorn',Georgia,serif; font-weight:400; letter-spacing:-.045em; }
+main > section:first-child h1 span { font-family:'Shadows Into Light',cursive; color:#e3dacb; font-size:1.2em; letter-spacing:0; }
+main > section:first-child h1 + p { color:#d4d3cd; }
+h2 { font-family:'Vollkorn',Georgia,serif; font-weight:400!important; font-size:clamp(28px,3vw,40px)!important; letter-spacing:-.025em!important; }
+#projects h3, #news h4, #experience h3 { font-family:'Vollkorn',Georgia,serif; font-weight:400; }
+#projects h3 { font-size:25px; }
+main > section:first-child > div:last-child { height:360px; }
+main > section:first-child > div:last-child > div:has(img) { border:8px solid #e3dacb; border-bottom-width:26px; border-radius:1px; box-shadow:10px 12px 0 #0c141a55; transform:rotate(2deg); background:#e3dacb; overflow:visible; }
+main > section:first-child > div:last-child > div:has(img)::before { content:''; position:absolute; width:92px; height:25px; background:#b7aea0a8; top:-18px; left:calc(50% - 46px); transform:rotate(-5deg); z-index:2; }
+main > section:first-child > div:last-child img { border-radius:0; opacity:1; }
+main > section:first-child > div:last-child img + div { box-shadow:none; }
+.lab-border::after { background:linear-gradient(90deg,#e3dacb35,transparent); }
+main > section:first-child a[href="#projects"] { background:#56758a33; border-color:#91a8b55c; }
+.stack-card { --stack-accent:#a7bdca; --stack-tint:#56758a18; border-radius:3px; border-color:#e3dacb25; background:linear-gradient(130deg,var(--stack-tint),transparent),#202c35; }
+.stack-purple { --stack-accent:#d2a68e; --stack-tint:#a66f5018; }
+.stack-pink { --stack-accent:#c6bba7; --stack-tint:#c6bba718; }
+.stack-silver { --stack-accent:#aabdb6; --stack-tint:#aabdb618; }
+.stack-card h3 { font-family:'Vollkorn',Georgia,serif; font-size:21px; color:#f2eadc; font-weight:400; }
+.stack-tags li { color:#cfd5d6; background:#111a2120; border-color:#e3dacb20; }
+.stack-icon { border-radius:2px; }
+#projects article, #projects > div.mb-8 { border-radius:3px; }
+#projects article > div:has(>img) { border:8px solid #e3dacb; }
+#news .group > .flex-1, #experience .group > div:last-child { background:#202c35; border-color:#e3dacb25; border-radius:3px; border-top:3px solid #56758a; }
+#news .group:nth-child(even) > .flex-1, #experience .group:nth-child(even) > div:last-child { border-top-color:#a66f50; }
+#news > div:last-child::before, #experience > div:last-child::before { background:linear-gradient(#94adbd,#a66f50,#e3dacb25); }
+#news .group > .absolute, #experience > div:last-child > .group::before { background:#182129; border-color:#91a8b5; box-shadow:0 0 0 5px #182129; }
+#news .group:first-child > .absolute, #experience > div:last-child > .group:first-child::before { border-color:#d2a68e; }
+#news h4, #experience h3 { font-size:24px; color:#f2eadc; }
+#news .group span, #experience .group > div:first-child p { font-family:'JetBrains Mono',monospace; }
+.contact-invitation { font-family:'Shadows Into Light',cursive; font-size:clamp(32px,5vw,56px); color:#e3dacb; }
+#contact h2 { font-family:Inter,sans-serif; font-size:clamp(20px,3vw,38px)!important; }
+::-webkit-scrollbar-track { background:#182129; }
+::-webkit-scrollbar-thumb { background:#56758a; }
+@media(max-width:767px){ main > section:first-child > div:last-child { height:300px; } }
+[class~="bg-[#050508]"] { background-color:#182129!important; }
+[class~="bg-[#07100f]"] { background-color:#202c35!important; }
+[class~="bg-[#08080c]"] { background-color:#202c35!important; }
+[class~="bg-[#0a0a0f]/50"] { background-color:#202c3580!important; }
+[class~="bg-cyanAccent"] { background-color:#a7c1d1!important; }
+[class~="bg-cyanAccent/10"] { background-color:#a7c1d11a!important; }
+[class~="bg-pinkAccent"] { background-color:#c6bba7!important; }
+[class~="bg-pinkAccent/10"] { background-color:#c6bba71a!important; }
+[class~="bg-purpleAccent"] { background-color:#d2a68e!important; }
+[class~="bg-purpleAccent/10"] { background-color:#d2a68e1a!important; }
+[class~="bg-purpleAccent/20"] { background-color:#d2a68e33!important; }
+[class~="bg-purpleAccent/5"] { background-color:#d2a68e0d!important; }
+[class~="bg-surface"] { background-color:#202c35!important; }
+[class~="bg-surfaceElevated"] { background-color:#2a3944!important; }
+[class~="bg-white/5"] { background-color:#f2eadc0d!important; }
+[class~="bg-zinc-600"] { background-color:#94a1ab!important; }
+[class~="border-[#050508]"] { border-color:#182129!important; }
+[class~="border-cyanAccent"] { border-color:#a7c1d1!important; }
+[class~="border-cyanAccent/20"] { border-color:#a7c1d133!important; }
+[class~="border-cyanAccent/30"] { border-color:#a7c1d14c!important; }
+[class~="border-pinkAccent"] { border-color:#c6bba7!important; }
+[class~="border-pinkAccent/20"] { border-color:#c6bba733!important; }
+[class~="border-purpleAccent"] { border-color:#d2a68e!important; }
+[class~="border-purpleAccent/20"] { border-color:#d2a68e33!important; }
+[class~="border-purpleAccent/30"] { border-color:#d2a68e4c!important; }
+[class~="border-purpleAccent/40"] { border-color:#d2a68e66!important; }
+[class~="border-purpleAccent/50"] { border-color:#d2a68e80!important; }
+[class~="border-white/10"] { border-color:#f2eadc1a!important; }
+[class~="border-white/5"] { border-color:#f2eadc0d!important; }
+.group:hover [class~="group-hover:text-base"] { color:#182129!important; }
+.group:hover [class~="group-hover:text-cyanAccent"] { color:#a7c1d1!important; }
+.group:hover [class~="group-hover:text-pinkAccent"] { color:#c6bba7!important; }
+.group:hover [class~="group-hover:text-purpleAccent"] { color:#d2a68e!important; }
+.group:hover [class~="group-hover:text-white"] { color:#f2eadc!important; }
+.group:hover [class~="group-hover:text-zinc-300"] { color:#d4d3cd!important; }
+[class~="hover:bg-[#12121a]"]:hover { background-color:#2a3944!important; }
+[class~="hover:bg-cyanAccent/20"]:hover { background-color:#a7c1d133!important; }
+[class~="hover:bg-pinkAccent/20"]:hover { background-color:#c6bba733!important; }
+[class~="hover:bg-purpleAccent/10"]:hover { background-color:#d2a68e1a!important; }
+[class~="hover:bg-surfaceElevated"]:hover { background-color:#2a3944!important; }
+[class~="hover:bg-white/10"]:hover { background-color:#f2eadc1a!important; }
+[class~="hover:bg-white/3"]:hover { background-color:#f2eadc08!important; }
+[class~="hover:border-cyanAccent"]:hover { border-color:#a7c1d1!important; }
+[class~="hover:border-cyanAccent/50"]:hover { border-color:#a7c1d180!important; }
+[class~="hover:border-pinkAccent"]:hover { border-color:#c6bba7!important; }
+[class~="hover:border-purpleAccent"]:hover { border-color:#d2a68e!important; }
+[class~="hover:border-white/20"]:hover { border-color:#f2eadc33!important; }
+[class~="hover:border-white/30"]:hover { border-color:#f2eadc4c!important; }
+[class~="hover:border-zinc-300"]:hover { border-color:#d4d3cd!important; }
+[class~="hover:text-cyanAccent"]:hover { color:#a7c1d1!important; }
+[class~="hover:text-pinkAccent"]:hover { color:#c6bba7!important; }
+[class~="hover:text-purpleAccent"]:hover { color:#d2a68e!important; }
+[class~="hover:text-white"]:hover { color:#f2eadc!important; }
+[class~="hover:text-zinc-200"]:hover { color:#e3dacb!important; }
+[class~="text-base"] { color:#182129!important; }
+[class~="text-cyanAccent"] { color:#a7c1d1!important; }
+[class~="text-cyanAccent/60"] { color:#a7c1d199!important; }
+[class~="text-cyanAccent/80"] { color:#a7c1d1cc!important; }
+[class~="text-pinkAccent"] { color:#c6bba7!important; }
+[class~="text-purpleAccent"] { color:#d2a68e!important; }
+[class~="text-purpleAccent/60"] { color:#d2a68e99!important; }
+[class~="text-purpleAccent/80"] { color:#d2a68ecc!important; }
+[class~="text-white"] { color:#f2eadc!important; }
+[class~="text-white/30"] { color:#f2eadc4c!important; }
+[class~="text-white/80"] { color:#f2eadccc!important; }
+[class~="text-zinc-100"] { color:#f2eadc!important; }
+[class~="text-zinc-200"] { color:#e3dacb!important; }
+[class~="text-zinc-300"] { color:#d4d3cd!important; }
+[class~="text-zinc-400"] { color:#b8c2c7!important; }
+[class~="text-zinc-500"] { color:#a4b1b9!important; }
+[class~="text-zinc-600"] { color:#94a1ab!important; }
+
+[class~="from-cyanAccent"] { --tw-gradient-from:#91a8b5!important; --tw-gradient-to:#91a8b500!important; --tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)!important; }
+[class~="to-purpleAccent"] { --tw-gradient-to:#a66f50!important; }
+i[class*="drop-shadow-"] { filter:none; }
+.glow-text { text-shadow:none; }
+/* Keep the print frame cream despite the original dark utility classes. */
+main > section:first-child > div:last-child > div:has(img) { border-color:#e3dacb!important; background-color:#e3dacb!important; }
